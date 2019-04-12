@@ -10,6 +10,49 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+@font-face {
+    font-family: SuisseWorks-Bold;  
+    src: url("fonts/SuisseWorks-Bold.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-BoldItalic;  
+    src: url("fonts/SuisseWorks-BoldItalic.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-Book;  
+    src: url("fonts/SuisseWorks-Book.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-BookItalic;  
+    src: url("fonts/SuisseWorks-BookItalic.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-Medium;  
+    src: url("fonts/SuisseWorks-Medium.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-MediumItalic;  
+    src: url("fonts/SuisseWorks-MediumItalic.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-Regular;  
+    src: url("fonts/SuisseWorks-Regular.otf");   
+}
+
+@font-face {
+    font-family: SuisseWorks-RegularItalic;  
+    src: url("fonts/SuisseWorks-RegularItalic.otf");   
+}
+
+
 @import "headings";
 
 @import "copy";
+
+
