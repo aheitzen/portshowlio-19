@@ -1,1 +1,15 @@
 // STUDENT PAGE SCSS GOES HERE
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'SuisseIntl-SemiBold', sans-serif;
+}
+
+p {
+    font-family: 'SuisseIntl-Light', sans-serif;
+    font-size: 1em;
+    line-height: 18px;
+}
+
+.caption {
+    font-family: 'SuisseWorks-Medium', serif;
+}
