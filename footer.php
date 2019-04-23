@@ -11,23 +11,33 @@
 
 ?>
 
-	</div><!-- #content -->
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portshowlio' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'portshowlio' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portshowlio' ), 'portshowlio', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<!-- see sccs file in ... -->
+
+<!-- Ian building footer -->
+
+</div><!-- #content -->
+
+<div class="ianfooter">
+  <div class="footersocial">
+		<div class="footerrow">
+		  <div class="socialoutline instagram social_center"><a href="https://www.instagram.com/creative_academy/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+			<div class="socialoutline scca social_center"><a href="http://www.seattlecentralcreativeacademy.com" target="_blank">scca</a></div>
+		</div>
+		<div class="footerrow">
+		  <div class="socialoutline facebook social_center"><a href="https://www.facebook.com/seattlecentralcreativeacademy/" target="_blank"><i class="fab fa-facebook"></i></a></div>
+		  <div class="socialoutline twitter social_center"><a href="https://twitter.com/sccaportfolio?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></div>
+		</div>
+	</div>
+  <div class="thankyou social_center">
+	  <p>The SCCA class of 2019 owes a huge debt of gratitude to the incredible teachers, staff, alumni, speakers, and designers of past and present who have educated and inspired us on our journey through this program. Thank you for showing us the way. We look forward to joining this amazingly creative and collaborative design community.</p>
+	</div>
+
+</div>
+
 </div><!-- #page -->
 
 
