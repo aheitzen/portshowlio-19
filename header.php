@@ -34,16 +34,16 @@
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
+				<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
+				<!-- <?php
 			endif;
 			$portshowlio_description = get_bloginfo( 'description', 'display' );
 			if ( $portshowlio_description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo $portshowlio_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			<?php endif; ?> -->
 		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation">
+		<!-- <nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'portshowlio' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -51,10 +51,10 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
+		</nav> --><!-- #site-navigation -->
         
         
-        <h3>Fantasy??</h3>
+        <!-- <h3>Fantasy??</h3> -->
         
         
 	</header><!-- #masthead -->
