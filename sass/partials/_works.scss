@@ -30,17 +30,16 @@ html, body {
 .works-grid {
 	display: grid;
 	grid-template-columns: 5em 1fr 1fr;
-	// grid-template-rows: repeat(10, 1fr);
 	grid-template-rows: repeat(auto-fill, 50em);
 	justify-items: center;
     align-items: center;
 }
 
-.test:nth-of-type(odd) {
+.works-container:nth-of-type(odd) {
 	grid-column-start: 2;
 }
 
-.test:nth-of-type(even) {
+.works-container:nth-of-type(even) {
 	grid-column-start: 3;
 	margin-top: 25em;
 }
