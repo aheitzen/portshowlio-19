@@ -1,7 +1,4 @@
 <div id="works">
-	<div class="primary-nav">
-			<img src="<?php the_field('image'); ?>" />
-	</div>
 	<?php
         //remove_all_filters('posts_orderby');
         $args = array(

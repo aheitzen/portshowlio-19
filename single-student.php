@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
 	<!-- HEADSHOT -->
-	<img src="<?php the_field('headshot'); ?>" />
+	<img class="single-post-headshot" src="<?php the_field('headshot'); ?>" />
 	<!-- NAME -->
 	<h2><?php the_title(); ?></h2>
 	<!-- WEBSITE LINK -->
@@ -16,9 +16,19 @@
 			<?php endforeach; ?>
 		<?php endif; ?>
 
-		<?php previous_post_link(); ?>    <?php next_post_link(); ?>
+	
+</div>
+<div class="bottom-student-navigation">
 
+		<h4 class="student-post-links">
+			&larr;  <?php previous_post_link('%link'); ?> 
+		</h4>  
+		<h4 class="student-post-links">
+			<?php next_post_link('%link'); ?>  &rarr;
+		</h4> 
 
+		
+</div>
 
 
 

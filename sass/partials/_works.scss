@@ -1,6 +1,14 @@
 // WORK PAGE SCSS GOES HERE
 html, body {
 	background-color: #FBF9F4;
+	height: 100%;
+	width: 100%;
+	margin-top: 0 !important;
+	padding: 0;
+}
+
+#page {
+	height: 100%;
 }
 
 .project-title {
@@ -127,4 +135,53 @@ html, body {
 	align-items: center;
 	grid-row-start: 6;
     grid-column-start: 2;
+}
+
+// STUDENT PAGE
+
+.bottom-student-navigation {
+	background-color: red;
+	height: 3em;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+        position: sticky;
+    bottom: 0;
+}
+
+.student-post-links {
+	color: $color__white;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+
+}
+
+.single-post-headshot {
+	height: 15em;
+}
+
+// NAVIGATION
+.site-header {
+	height: 100%;
+	width: 100%;
+}
+
+.site-content {
+	width: calc(100% - 11em);
+	margin-left: 11em;
+	min-height: 100%;
+}
+
+.primary-navigation {
+	background-color: $color__black;
+    width: 11em;
+    height: 100%;
+    position: fixed;
 }
