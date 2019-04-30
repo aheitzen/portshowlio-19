@@ -168,7 +168,6 @@ a:visited {
 
 .single-post-headshot {
 	height: 15em;
-	// margin-left: 2em;
 }
 
 .student-post-page-grid {
@@ -213,4 +212,12 @@ a:visited {
     width: 11em;
     height: 100%;
     position: fixed;
+}
+
+
+// GRID GRID GRID VERTICLE GRID
+
+.grid-verticle-two {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
 }

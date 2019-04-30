@@ -29,12 +29,25 @@
 		<?php if( get_row_layout() == 'project' ): ?>
 
 			<h3><?php the_sub_field('project_title'); ?></h3>
+			<h3><?php the_sub_field('project_type'); ?></h3>
+			
+			<?php if( get_sub_field('collaborators') ): ?>
+				<p class="collaboratortitle">Collaborators</p>
+ 			<?php endif; ?>
+			<?php $post_objects = get_sub_field('collaborators'); if( $post_objects ): ?>
+				<?php foreach( $post_objects as $post): ?>
+					<?php setup_postdata($post); ?>
+						<a class="collaborators siteLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php endforeach; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+			
 			<?php if( have_rows('project_images') ): ?>
 				<?php while ( have_rows('project_images') ) : the_row(); ?>
 
-					<!--3 COLUMN PORTRAIT -->
-					<?php if( get_row_layout() == 'portrait_3_column' ): ?>
-						<div class="rowProject grid-three">
+					<!--2 COLUMN VERTICAL PORTRAIT -->
+					<?php if( get_row_layout() == 'two_vertical_images' ): ?>
+						<div class="rowProject grid-verticle-two">
 							<?php if( have_rows('images') ): ?>
 								<?php  while( have_rows('images') ) : the_row(); ?>
 									<div class="imageThird imageGrid">
@@ -91,13 +104,12 @@
 <?php endif; ?>
 
 <div class="bottom-student-navigation">
-
-		<h4 class="student-post-links">
-			&larr;  <?php previous_post_link('%link'); ?> 
-		</h4>  
-		<h4 class="student-post-links">
-			<?php next_post_link('%link'); ?>  &rarr;
-		</h4> 
+	<h3 class="student-post-links">
+		&larr;  <?php previous_post_link('%link'); ?> 
+	</h3>  
+	<h3 class="student-post-links">
+		<?php next_post_link('%link'); ?>  &rarr;
+	</h3> 
 
 		
 </div>
