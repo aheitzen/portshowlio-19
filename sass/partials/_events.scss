@@ -1,3 +1,38 @@
+// 404 STARTS HERE
+.content-404 {
+	height: 100vh;
+	width: auto;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	.big-404{
+		font-size: 15em;
+		margin: auto 0 0 0;
+    line-height: 30vh;
+	}
+}
+.page-content-404{
+	p{
+		font-size: 1.5em;
+		line-height: 28px;
+		width: 39%;
+		margin: auto;
+	}
+}
+.buttonWrapper{
+	width: 50%;
+	margin: auto;
+	padding: 5% 0;
+	a{
+		border-style: solid;
+		padding: 3%;
+		text-decoration: none;
+		background-color: $color__black;
+		color: $color__white;
+	}
+}
+
 // FOOTER SCSS STARTS HERE
 .ianfooter{
 	margin: 100px 0 0 0;
