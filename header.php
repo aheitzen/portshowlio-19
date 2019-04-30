@@ -24,8 +24,10 @@
 <div id="page" class="site">
 	<header>
 		<div class="primary-navigation">
-		
+			<h4>June 13'th and 14'th</h4>
+			<h6>6:00pm - 9:00pm</h6>
 		</div>
+		
 	
 	</header>
 
