@@ -24,11 +24,13 @@
 <body <?php body_class(); ?>>
     <div id="page" class="site">
         <header>
-            <div class="primary-navigation" id="sidebar-nav">                
+            <div class="primary-navigation" id="sidebar-nav">
                 <a href=""><img id="logo" src="<?php the_field('portshowlio_logo'); ?>" /></a>
                 <hr>
-                <h3 class="">June 13th & 14th</h3>
-                <h4 class="subhead">6:00pm - 9:00pm</h4>
+                <div id="show-details">
+                    <h3 class="">June 13th & 14th</h3>
+                    <h4 class="subhead">6:00pm - 9:00pm</h4>
+                </div>
                 <hr>
                 <nav>
                     <a href="">
