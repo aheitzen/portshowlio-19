@@ -1,94 +1,95 @@
 // WORK PAGE SCSS GOES HERE
-html, body {
-	background-color: #FBF9F4;
-	height: 100%;
-	width: 100%;
-	margin-top: 0 !important;
-	padding: 0;
+html,
+body {
+    background-color: #FBF9F4;
+    height: 100%;
+    width: 100%;
+    margin-top: 0 !important;
+    padding: 0;
 }
 
 #page {
-	height: 100%;
+    height: 100%;
 }
 
 .project-title {
-	font-family: "SuisseWorks-Bold";
-	margin-bottom: 10px;
+    font-family: "SuisseWorks-Bold";
+    margin-bottom: 10px;
 }
 
 .project-type {
-	font-family: "SuisseWorks-MediumItalic";
-	margin-top: 0;
-	margin-bottom: 0;
+    font-family: "SuisseWorks-MediumItalic";
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .black-bar {
-	height: 1px;
-	width: 7em;
-	background-color: black;
-	margin-top: 5px;
+    height: 1px;
+    width: 7em;
+    background-color: black;
+    margin-top: 5px;
 }
 
 .works-images {
-	max-width: 100%;
+    max-width: 100%;
     height: 30em;
     margin-top: 5em;
 }
 
 .works-grid {
-	display: grid;
-	grid-template-columns: 5em 1fr 1fr;
-	grid-template-rows: repeat(auto-fill, 50em);
-	justify-items: center;
+    display: grid;
+    grid-template-columns: 5em 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 50em);
+    justify-items: center;
     align-items: center;
 }
 
 .works-container:nth-of-type(odd) {
-	grid-column-start: 2;
+    grid-column-start: 2;
 }
 
 .works-container:nth-of-type(even) {
-	grid-column-start: 3;
-	margin-top: 25em;
+    grid-column-start: 3;
+    margin-top: 25em;
 }
 
 .search-filter {
-	height: 2.7em;
-	width: 100%;
-	background-color: $color__black;
-	position: sticky;
+    height: 2.7em;
+    width: 100%;
+    background-color: $color__black;
+    position: sticky;
     bottom: 0;
 }
 
 .primary-nav {
-	grid-column-start: 1;
-	background-color: red;
+    grid-column-start: 1;
+    background-color: red;
 
 }
 
 // CONSTRUCTION PAGE
 
 .construction-image {
-	margin: 0;
+    margin: 0;
     margin-top: 0;
     height: 45em;
     max-width: 100%;
 }
 
 .construction-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .placeholder-video {
-	// width: 640px;
-	// height: 360px;
-	// background-color: $color__black; 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+    // width: 640px;
+    // height: 360px;
+    // background-color: $color__black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -101,51 +102,51 @@ html, body {
 }
 
 .placeholder-video-three {
-	width: 640px;
-	height: 360px;
-	background-color: $color__black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	grid-row-start: 4;
+    width: 640px;
+    height: 360px;
+    background-color: $color__black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 4;
     grid-column-start: 1;
 }
 
 .placeholder-video-text {
-	font-family: SuisseWorks-Bold;
-	color: $color__white;
-	font-size: 3em;
+    font-family: SuisseWorks-Bold;
+    color: $color__white;
+    font-size: 3em;
 }
 
 .construction-video-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(4, 200px);
-	margin: 0 auto;
-	justify-items: center;
-	margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 200px);
+    margin: 0 auto;
+    justify-items: center;
+    margin: 20px;
 }
 
 .placeholder-video-four {
-	width: 640px;
-	height: 360px;
-	background-color: $color__black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	grid-row-start: 6;
+    width: 640px;
+    height: 360px;
+    background-color: $color__black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 6;
     grid-column-start: 2;
 }
 
-    // font-size: 2em;
-    // color: black;
-    // margin-top: 0;
+// font-size: 2em;
+// color: black;
+// margin-top: 0;
 
 // STUDENT PAGE
 
 .bottom-student-navigation {
-	background-color: $color__black;
-	display: flex;
+    background-color: $color__black;
+    display: flex;
     align-items: center;
     justify-content: space-between;
      position: fixed;
@@ -154,16 +155,16 @@ html, body {
 }
 
 .student-post-links {
-	color: $color__white;
-	
+    color: $color__white;
+
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:visited {
-	color: inherit;
+    color: inherit;
 
 }
 
@@ -173,25 +174,25 @@ a:visited {
 }
 
 .single-post-headshot {
+
 	height: 32em;
     margin-left: 2em;
     margin-top: 1.7em;
     margin-bottom: 3.7em;
+
+    // height: 15em; sean
+
 }
 
 .student-post-page-grid {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	    margin-left: 2em;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 2em;
     margin-top: 2em;
 }
 
-// .three-categories-focus {
-// 	grid-column-start: 2;
-//     display: flex;
-//     flex-direction: column;
-// }
+
 
 .focus {
 	    margin-bottom: 0;
@@ -199,17 +200,24 @@ a:visited {
 	    color: $color__black;
 }
 
-.siteLink {
-	grid-column-start: 2;
 
+.three-categories-focus {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.siteLink {
+    grid-column-start: 2;
 }
 
 .black-divider-line {
-	background-color: $color__black;
-	height: 2px;
-	width: 95%;
-	margin: 0 auto;
+    background-color: $color__black;
+    height: 2px;
+    width: 95%;
+    margin: 0 auto;
 }
+
 
 .fab {
 	font-size: 2.5em;
@@ -222,18 +230,7 @@ a:visited {
 	width: 100%;
 }
 
-.site-content {
-	width: calc(100% - 11em);
-	margin-left: 11em;
-	min-height: 100%;
-}
 
-.primary-navigation {
-	background-color: $color__black;
-    width: 11em;
-    height: 100%;
-    position: fixed;
-}
 
 
 // GRID GRID GRID VERTICLE GRID
@@ -306,6 +303,8 @@ a:visited {
 
 .video {
 	width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
