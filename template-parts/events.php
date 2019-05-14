@@ -1,3 +1,8 @@
+<?php 
+/* Template Name: Event Page */ 
+?>
+<?php get_header(); ?>
+
 <div id="events"><h1>ALL THE EVENT STUFF BELOW</h1></div>
 
 <!-- INTRO SECTION -->
@@ -55,3 +60,4 @@
   </div>
 </div>
 <!-- END FLOOR PLANS -->
+<?php get_footer(); ?>
