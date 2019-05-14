@@ -1,3 +1,16 @@
+// BRANDING COLORS
+
+$color__black: #191919;
+$color__white: #FBF9F4;
+$color__blue: #3F5FAC;
+$color__yellow: #F6EB14;
+$color__red: #EE2B2F;
+$color__cyan: #6FCCDC;
+
+
+
+// OTHER COLORS
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -8,9 +21,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__black;
+$color__link-visited: $color__black;
+$color__link-hover: $color__black;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -18,13 +31,3 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
-
-// BRANDING COLORS
-
-$color__black: #191919;
-$color__white: #FBF9F4;
-$color__blue: #3F5FAC;
-$color__yellow: #F6EB14;
-$color__red: #EE2B2F;
-$color__cyan: #6FCCDC;
-
