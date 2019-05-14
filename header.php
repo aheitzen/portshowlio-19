@@ -33,13 +33,13 @@
                 </div>
                 <hr>
                 <nav>
-                    <a href="">
+                    <a href="<?php bloginfo("template_url")?>/home">
                         <h2>Work</h2>
                     </a>
-                    <a href="">
+                    <a href="<?php bloginfo("template_url")?>/student-grid-page">
                         <h2>Students</h2>
                     </a>
-                    <a href="">
+                    <a href="<?php bloginfo("template_url")?>/event-page">
                         <h2>Event</h2>
                     </a>
                 </nav>
