@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 	<div class="student-post-page-grid">
 	
 		<!-- HEADSHOT -->
@@ -38,18 +39,20 @@
 			<?php if( get_sub_field('collaborators') ): ?>
 				<p class="collaboratortitle">Collaborators</p>
  			<?php endif; ?>
-			<?php $post_objects = get_sub_field('collaborators'); if( $post_objects ): ?>
+			<?php 
+				$post_objects = get_sub_field('collaborators'); 
+				if( $post_objects ): 
+			?>
 				<?php foreach( $post_objects as $post): ?>
 					<?php setup_postdata($post); ?>
 						<a class="collaborators siteLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					<?php endforeach; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
+				<?php endforeach; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
 		</div>	
 		<div class="project-images">
-			<?php if( have_rows('project_images') ): ?>
+			<?php if (have_rows('project_images')) : ?>
 				<?php while ( have_rows('project_images') ) : the_row(); ?>
-
 					<!--2 COLUMN VERTICAL LAYOUT -->
 					<?php if( get_row_layout() == 'two_vertical_images' ): ?>
 						<div class="rowProject grid-verticle-two">
@@ -59,56 +62,71 @@
 										<?php $imageurl = get_sub_field('image'); ?>
 										<img src="<?php echo $imageurl; ?>" />
 									</div>
-								<?php endwhile; ?>
+								<?php endwhile; wp_reset_postdata(); ?>
+
 							<?php endif; ?>
 						</div>
 
 					<!--2 COLUMN HORIZONTAL LAYOUT -->
-				    <?php elseif( get_row_layout() == 'two_horizontal_images' ): ?>
+					<?php elseif( get_row_layout() == 'two_horizontal_images' ): ?>
 						<div class="rowProject grid-horizontal-two">
-				        	<?php if(get_sub_field('images')): ?>
-								<?php while(has_sub_field('images')): ?>
+							<?php if( have_rows('images') ): ?>
+								<?php  while( have_rows('images') ) : the_row(); ?>
 									<div class="imageGrid">
 										<?php $imageurl = get_sub_field('image'); ?>
 										<img src="<?php echo $imageurl; ?>" />
 									</div>
-								<?php endwhile; ?>
+								<?php endwhile; wp_reset_postdata(); ?>
+
 							<?php endif; ?>
 						</div>
 								
 					<!--2 COLUMN HORIZONTAL AND VERTICAL LAYOUT -->
 					<?php elseif( get_row_layout() == 'horizontal_then_vertical' ): ?>
 						<div class="rowProject grid-horizontal-then-vertical">
-							<div class="">
-								<?php $imageurl = get_sub_field('image'); ?>
-								<img src="<?php echo $imageurl; ?>" />
-							</div>
+							<?php if( have_rows('images') ): ?>
+								<?php  while( have_rows('images') ) : the_row(); ?>
+									<div class="imageGrid">
+										<?php $imageurl = get_sub_field('image'); ?>
+										<img src="<?php echo $imageurl; ?>" />
+									</div>
+								<?php endwhile; wp_reset_postdata(); ?>
+
+							<?php endif; ?>
 						</div>			
 
 					<!--2 COLUMN VERICAL AND HORIZONTAL LAYOUT -->
+					<?php elseif( get_row_layout() == 'vertical_then_horizontal' ): ?>
+						<div class="rowProject grid-vertical-then-horizontal">
+							<?php if( have_rows('images') ): ?>
+								<?php  while( have_rows('images') ) : the_row(); ?>
+									<div class="imageGrid">
+										<?php $imageurl = get_sub_field('image'); ?>
+										<img src="<?php echo $imageurl; ?>" />
+									</div>
+								<?php endwhile; wp_reset_postdata(); ?>
+
+							<?php endif; ?>
+						</div>
+		
+					<!--Landscape -->
 				    <?php elseif( get_row_layout() == 'landscape_image' ): ?>
-						<div class="rowProject">
-				       		<div class="">
+						<div class="rowProject grid-landscape">
+							<div class="landscape">
 								<?php $imageurl = get_sub_field('image'); ?>
 								<img src="<?php echo $imageurl; ?>" />
 							</div>
 						</div>
-		
-					<!--Video -->
-				    <?php elseif( get_row_layout() == 'video' ): ?>
-						<div class="rowProject">
-							<div class="video">
-				        		<?php the_sub_field('video'); ?>
-				   			</div>
-				   		</div>
 
 				   	<!--Video -->
-				    <?php elseif( get_row_layout() == 'video' ): ?>
-						<div class="rowProject">
+				   	<?php elseif( get_row_layout() == 'video' ): ?>
+						<div class="rowProject grid-video">
 							<div class="video">
 				        		<?php the_sub_field('video'); ?>
 				   			</div>
-				   		</div>
+						</div>
+
+					<!-- END OF LAYOUTS -->	
 				   	<?php endif; ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
