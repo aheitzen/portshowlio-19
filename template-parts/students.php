@@ -40,11 +40,11 @@
 
     <div class="search-filter">
         <p>
-            Search: <input type="search" id="searchInput">
+            Search: <input type="search" id="searchInput" size="30">
         </p>
         <p>
             Filter: 
-            <input class="radio" type="radio" id="filterAll" name="filter" value="0">
+            <input class="radio" type="radio" id="filterAll" name="filter" value="0" checked="checked">
             <label for="filterAll">All</label>
 
             <input class="radio" type="radio" id="filterGraphicDesign" name="filter" value="1">

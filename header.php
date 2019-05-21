@@ -33,15 +33,16 @@
                 </div>
                 <hr>
                 <nav>
-                    <a href="">
-                        <h2>Work</h2>
-                    </a>
-                    <a href="">
-                        <h2>Students</h2>
-                    </a>
-                    <a href="">
-                        <h2>Event</h2>
-                    </a>
+                    <div class="navItem" id="navWork">
+                        <a href="" id="navWorklink"><h2>Work</h2></a>
+                    </div>
+                    <div class="navItem" id="navStudents">
+                        <a href="" id="navStudentslink"><h2>Students</h2></a>
+                    </div>
+                    <div class="navItem" id="navEvent">
+                        <a href="" id="navEventlink"><h2>Event</h2></a>
+                    </div>
+
                 </nav>
             </div>
 
