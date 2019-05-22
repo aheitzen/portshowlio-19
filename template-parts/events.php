@@ -1,21 +1,3 @@
-<div class="homepage_video">
-  <?php
-  // Get the Video Fields
-  $video_mp4 =  get_field('homepage_video'); // MP4 Field Name
-  // Build the  Shortcode
-  $attr =  array(
-  'mp4'      => $video_mp4,
-  'preload'  => 'auto',
-  'loop'     => 'on',
-  'autoplay' => 'on',
-  'preload'  => 'auto'
-  );
-
-  // Display the Shortcode
-  echo wp_video_shortcode(  $attr );
-  ?>
-</div>
-
 <div class="event-intro">
   <!-- INTRO SECTION -->
   <div class="container event-section">
@@ -53,57 +35,12 @@
   <!-- END MAP SECTION -->
 </div>
 
-<!-- DAY IN THE LIFE VIDEO -->
-<div class="container event-lifevideo">
-  <div class="row">
-    <div class="cell event">
-      <h3>A Day In The Life</h3>
-      <div class="embed-container">
-        <?php
-
-        // get iframe HTML
-        $iframe = get_field('life_video');
-
-
-        // use preg_match to find iframe src
-        preg_match('/src="(.+?)"/', $iframe, $matches);
-        $src = $matches[1];
-
-
-        // add extra params to iframe src
-        $params = array(
-            'controls'    => 1,
-            'hd'        => 1,
-            'autohide'    => 1
-        );
-
-        $new_src = add_query_arg($params, $src);
-
-        $iframe = str_replace($src, $new_src, $iframe);
-
-
-        // add extra attributes to iframe html
-        $attributes = 'frameborder="0"';
-
-        $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-
-        // echo $iframe
-        echo $iframe;
-
-        ?>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END DAY IN THE LIFE VIDEO -->
-
 <!-- FLOOR PLANS -->
 <div class="container event-floorplan">
   <div class="row">
     <div class="cell event">
-      <h3>Event Floor Plans</h3>
-      <img src="https://2018.portshowl.io/wp-content/uploads/2018/06/new_map.jpg"/>
+      <h3>Event Floor Plan</h3>
+      <img src="<?php the_field('show_map'); ?>" alt="" />
     </div>
   </div>
 </div>

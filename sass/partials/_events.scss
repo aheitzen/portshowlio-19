@@ -7,8 +7,24 @@
   align-items: center;
 	text-align: center;
 }
+.header-404{
+	width: 50%;
+	margin: auto;
+	padding-top: 10%;
+}
 .page-content-404{
+	h2{
+		margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 11vw;
+		color: $color__cyan;
+	}
 	p{
+		padding-top: 3%;
 		font-size: 1.5em;
 		line-height: 28px;
 		width: 39%;
@@ -27,6 +43,11 @@
 		color: $color__white;
 	}
 }
+.mouse-warp-404{
+	position: absolute;
+	margin-left: -50px;
+	margin-top: 5%;
+}
 
 // FOOTER SCSS STARTS HERE
 .ianfooter{
@@ -42,12 +63,13 @@
 }
 .ianfooter .fab {
 	font-size: 45px;
+	padding-bottom: 10%;
 }
 .ianfooter a .fab {
 	color: $color__white;
 }
 .ianfooter a .fab:hover {
-	color: $color__link-hover;
+	border-bottom: 2px solid;
 }
 .footersocial {
 	display: flex;
@@ -90,7 +112,7 @@
   font-size: 1.7em;
   }
   a:hover{
-  color: $color__link-hover;
+  border-bottom: 2px solid;
   }
 }
 .socialoutline {
@@ -116,20 +138,13 @@
 			}
 	}
 }
+@media all and (max-width: 480px) {
+	.footersocial {
+		padding-top: 5%
+	}
+}
 
 // EVENT PAGE SCSS STARTS HERE
-.homepage_video{
-	height: 100vh;
-	width: auto;
-}
-.wp-video{
-	width: 100% !important;
-	height: 100% !important;
-}
-.mejs-controls {
-  display: none !important;
-  visibility: hidden !important;
-  }
 .event-dates{
 	h3{
 		margin: 0;
@@ -161,8 +176,11 @@
     margin-left: 0;
     margin-right: 0;
 }
-.event-intro, .event-floorplan, .event-lifevideo {
-  padding: 5% 10% 10% 10%;
+.event-intro {
+  padding: 10% 10% 10% 10%;
+}
+.event-floorplan {
+	padding: 0% 10% 10% 10%;
 }
 .map-copy {
   padding: 0 5% 8% 5%;
@@ -179,9 +197,9 @@
 		margin: auto;
 	}
 }
-.event-floorplan, .event-lifevideo{
+.event-floorplan {
 	h3{
-		font-size: 2.5em;
+		font-size: 3vw;
 	}
 }
 .embed-container {
@@ -198,16 +216,7 @@
 	height: 100%; }
 
 @media all and (max-width: 991px) {
-  .pop {
-  font-size: 90px;
-  line-height: 1.1;
-  }
-  .para {
-  padding-right: 0%;
-  font-size: 20px;
-  line-height: 1.8;
-  font-family: HalisR;
-  }
+
 }
 @media all and (max-width: 767px) {
 	.rowEvent{
@@ -226,15 +235,45 @@
 		.map-copy{
 			text-align: center;
 		}
+		.event-floorplan{
+			h3{
+				font-size: 4vw;
+				text-align: center;
+			}
+		}
+		.rowEvent .cellEventIntro {
+				text-align: center;
+				padding-bottom: 15%;
+				h3{
+					margin: 0;
+					font-size: 3vw;
+				}
+				h1{
+					margin: 0;
+					font-size: 5vw;
+				}
+		}
+		.map{
+			padding-bottom: 15%;
+		}
 	}
 @media all and (max-width: 480px) {
-  .pop {
-  font-size: 80px;
-  }
-  .para {
-  font-size: 16px;
-  }
-  .border-left {
-  border-left: none;
-  }
+	.rowEvent .cellEventIntro {
+			text-align: center;
+			padding-bottom: 15%;
+			h3{
+				margin: 0;
+	      font-size: 3vw;
+			}
+			h1{
+				margin: 0;
+		    font-size: 5vw;
+			}
+	}
+	.event-floorplan{
+		h3{
+			font-size: 4vw;
+			text-align: center;
+		}
+	}
 }
