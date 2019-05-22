@@ -5,67 +5,77 @@
 		<!-- HEADSHOT -->
 		<img class="single-post-headshot" src="<?php the_field('headshot'); ?>" />
 		<div class="secondary">
-		<!-- NAME -->
-		<h2 class="single-post-h2"><?php the_title(); ?></h2>
-		<!-- THREE CATEGORIES OF FOCUS -->
-		<div class="three-categories-focus">
-		<?php $focus = get_field('focus');
-				if( $focus ): 
-					$numItems = count($focus);
-					$i = 0;
-				?>
-				<?php foreach( $focus as $focus ): ?>
-						<p class='focus'>&nbsp;
-							<?php 
-								echo $focus;
-								if(++$i !== $numItems) {
-	    							echo "&nbsp;&#8212;";
-	  							}
-	  						?>
-  						</p>
-				<?php endforeach; ?>
-			<?php endif; ?>
-		</div>
-		<!-- WEBSITE LINK -->
-		<p class="portfolio-site-link-style"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
+			<!-- NAME -->
+			<h2 class="single-post-h2"><?php the_title(); ?></h2>
+			<!-- THREE CATEGORIES OF FOCUS -->
+			<div class="three-categories-focus">
+			<?php $focus = get_field('focus');
+					if( $focus ): 
+						$numItems = count($focus);
+						$i = 0;
+					?>
+					<?php foreach( $focus as $focus ): ?>
+							<p class='focus'>&nbsp;
+								<?php 
+									echo $focus;
+									if(++$i !== $numItems) {
+		    							echo "&nbsp;&#8212;";
+		  							}
+		  						?>
+	  						</p>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</div>
+			<!-- WEBSITE LINK -->
+			<p class="portfolio-site-link-style"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
 
-		<!-- SOCIAL MEDIA -->
-		<div class='socialSection'>
-			<?php if( get_field('facebook_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('facebook_page')?>' target='_blank'><i class="fab fa-facebook-f"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('linkedin_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('linkedin_page')?>' target='_blank'><i class="fab fa-linkedin-in"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('twitter_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('twitter_page')?>' target='_blank'><i class="fab fa-twitter"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('instagram_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('instagram_page')?>' target='_blank'><i class="fab fa-instagram"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('tumblr_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('tumblr_page')?>' target='_blank'><i class="fab fa-tumblr"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('pinterest_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('pinterest_page')?>' target='_blank'><i class="fab fa-pinterest"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('youtube_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('youtube_page')?>' target='_blank'><i class="fab fa-youtube"></i></a>
-			<?php endif; ?>
-			<?php if( get_field('vimeo_page') ): ?>
-				<a class='socialIcon' href='<?php the_field('vimeo_page')?>' target='_blank'><i class="fab fa-vimeo-v"></i></a>
-			<?php endif; ?>
-		</div>
+			<!-- SOCIAL MEDIA -->
+			<div class='socialSection'>
+				<?php if( get_field('facebook_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('facebook_page')?>' target='_blank'><i class="fab fa-facebook-f"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('linkedin_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('linkedin_page')?>' target='_blank'><i class="fab fa-linkedin-in"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('twitter_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('twitter_page')?>' target='_blank'><i class="fab fa-twitter"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('instagram_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('instagram_page')?>' target='_blank'><i class="fab fa-instagram"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('tumblr_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('tumblr_page')?>' target='_blank'><i class="fab fa-tumblr"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('pinterest_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('pinterest_page')?>' target='_blank'><i class="fab fa-pinterest"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('youtube_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('youtube_page')?>' target='_blank'><i class="fab fa-youtube"></i></a>
+				<?php endif; ?>
+				<?php if( get_field('vimeo_page') ): ?>
+					<a class='socialIcon' href='<?php the_field('vimeo_page')?>' target='_blank'><i class="fab fa-vimeo-v"></i></a>
+				<?php endif; ?>
+			</div>
+				
 		
-		
-		
+		<!-- <div class='projectSelectorHeader'>
+			<?#php if( have_rows('projects') ): ?>
+				<?#php while ( have_rows('projects') ) : the_row(); ?>
+					<?#php if( get_row_layout() == 'project' ): ?>
+						<a href="#<?#php echo $FileName = get_sub_field('project_title'); ?>"  class='projectSelectorNameHeader'>
+							<?#php the_sub_field('project_title'); ?>
+							</a>
+					<?#php endif; ?>
+				<?#php endwhile; ?>
+			<?#php endif; ?>
+		</div> -->
+
 		
 
 		
 		</div>
 	</div>
 <div class="black-divider-line"></div>
-
 <?php if( have_rows('projects') ): ?>
 	<?php while ( have_rows('projects') ) : the_row(); ?>
 		<?php if( get_row_layout() == 'project' ): ?>
@@ -159,6 +169,21 @@
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
+
+<script>
+	$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 316) {
+	  $('#sidebar-nav #student').removeClass('hideNav');
+	  $('#sidebar-nav #student').addClass('showNav');
+	 
+  } else {
+	  $('#sidebar-nav #student').removeClass('showNav');
+	$('#sidebar-nav #student').addClass('hideNav');
+	  
+  }
+});
+</script>
 
 <div class="bottom-student-navigation">
 	<h3 class="student-post-links">

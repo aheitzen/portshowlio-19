@@ -22,7 +22,7 @@
         <div class="students-test">
             <a href="<?php the_permalink();?>">
                 <h2 class="students-names"><?php echo get_the_title( $post_id ); ?></h2>
-                <img class="students-images" src="<?php the_field('headshot'); ?>" />
+                <img class="students-images" onmouseover="onHoverStudent(this, '<?php the_field('headshot_hover'); ?>')" onmouseleave="onLeaveStudent(this, '<?php the_field('headshot'); ?>')" src="<?php the_field('headshot'); ?>" />
             </a>
             <p class="students-focus subhead"><?php the_field('focus'); ?></p>
             <div class="black-bar-long"></div>
@@ -51,4 +51,20 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+    function onHoverStudent(element, hoverImage) {
+        if (!hoverImage || hoverImage === '') {
+            return
+        }
+
+        $(element).attr('src', hoverImage);
+    }
+
+    function onLeaveStudent(element, headshot) {
+        console.log('leave')
+        $(element).attr('src', headshot);
+    }
+</script>
+
 <?php get_footer(); ?>

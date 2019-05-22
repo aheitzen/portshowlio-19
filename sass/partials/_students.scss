@@ -134,6 +134,16 @@ nav {
     background: $color__black;
 }
 
+#sidebar-nav {
+    .hideNav {
+        display: none;
+    }
+
+    .showNav {
+        display: block;
+    }
+}
+
 
 
 //  MEDIA QUERIES
