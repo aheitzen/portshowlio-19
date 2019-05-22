@@ -28,19 +28,19 @@
                 <a href=""><img id="logo" src="<?php the_field('portshowlio_logo'); ?>" /></a>
                 <hr>
                 <div id="show-details">
-                    <h3 class="">June 13th & 14th</h3>
+                    <h3 class="">June 12th & 13th</h3>
                     <h4 class="subhead">6:00pm - 9:00pm</h4>
                 </div>
                 <hr>
                 <nav>
                     <div class="navItem" id="navWork">
-                        <a href="" id="navWorklink"><h2>Work</h2></a>
+                        <h2><a href="" id="navWorklink">Work</a></h2>
                     </div>
                     <div class="navItem" id="navStudents">
-                        <a href="" id="navStudentslink"><h2>Students</h2></a>
+                        <h2><a href="" id="navStudentslink">Students</a></h2>
                     </div>
                     <div class="navItem" id="navEvent">
-                        <a href="" id="navEventlink"><h2>Event</h2></a>
+                        <h2><a href="" id="navEventlink">Event</a></h2>
                     </div>
 
                 </nav>

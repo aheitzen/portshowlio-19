@@ -122,16 +122,21 @@ nav {
 }
 
 .navItem {
-    display: inline;
+    display: block;
 }
 
-#navEventlink:hover::before {
-    content: "";
-    display: block;
-    height: 2em;
-    width: 4em;
-    align-self: center;
-    background: $color__black;
+//#navEventlink:hover::before {
+//    content: "";
+//    display: block;
+//    height: 2em;
+//    width: 4em;
+//    align-self: center;
+//    background: $color__black;
+//}
+
+.navItem:hover, .navItemActive {
+    border-left: $color__black 20px solid;
+    padding-left: 1em;
 }
 
 
