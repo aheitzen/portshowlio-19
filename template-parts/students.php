@@ -1,3 +1,8 @@
+<?php 
+/* Template Name: Student Grid Page */ 
+?>
+<?php get_header(); ?>
+
 <div id="students">
     <div class="primary-nav">
         <img src="<?php the_field('image'); ?>" />
@@ -56,3 +61,4 @@
     </div>
 
 </div>
+<?php get_footer(); ?>

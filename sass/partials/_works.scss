@@ -136,8 +136,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+     position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 .student-post-links {
@@ -154,8 +155,20 @@ a:visited {
 
 }
 
+.single-post-h2 {
+	color: $color__black;
+	font-size: 4.5em;
+}
+
 .single-post-headshot {
-    height: 15em;
+
+	height: 32em;
+    margin-left: 2em;
+    margin-top: 1.7em;
+    margin-bottom: 3.7em;
+
+    // height: 15em; sean
+
 }
 
 .student-post-page-grid {
@@ -165,6 +178,15 @@ a:visited {
     margin-left: 2em;
     margin-top: 2em;
 }
+
+
+
+.focus {
+	    margin-bottom: 0;
+	    font-size: 2em;
+	    color: $color__black;
+}
+
 
 .three-categories-focus {
     grid-column-start: 2;
@@ -184,11 +206,92 @@ a:visited {
 }
 
 
+.fab {
+	font-size: 2.5em;
+	color: $color__black;
+}
+
+// NAVIGATION
+.site-header {
+	height: 100%;
+	width: 100%;
+}
+
+
 
 
 // GRID GRID GRID VERTICLE GRID
 
 .grid-verticle-two {
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-gap: 3em;
+	margin-bottom: 3em;
+	.imageGrid {
+		&:first-of-type {
+			grid-column: 2 / span 5;
+			grid-row: 1 / span 7;
+		}
+		img {
+			max-height: 800px;
+			max-width: 100%;
+		}
+		&:nth-of-type(2) {
+			grid-column: 8 / span 5;
+			grid-row: 2 / span 7;
+		}
+	}
+}
+
+.grid-horizontal-two {
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-gap: 3em;
+	margin-bottom: 3em;
+	.imageGrid {
+		&:first-of-type {
+			grid-column: 2 / span 5;
+			grid-row: 1 / span 7;
+		}
+		img {
+			max-height: 800px;
+			max-width: 100%;
+		}
+		&:nth-of-type(2) {
+			grid-column: 8 / span 5;
+			grid-row: 3 / span 7;
+		}
+	}
+}
+
+.grid-horizontal-then-vertical {
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	grid-gap: 3em;
+	margin-bottom: 3em;
+	.imageGrid {
+		&:first-of-type {
+			grid-column: 2 / span 5;
+			grid-row: 1 / span 7;
+		}
+		img {
+			max-height: 800px;
+			max-width: 100%;
+		}
+		&:nth-of-type(2) {
+			grid-column: 8 / span 5;
+			grid-row: 3 / span 7;
+		}
+	}
+}
+
+.video {
+	width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+
