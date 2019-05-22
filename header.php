@@ -33,15 +33,17 @@
                 </div>
                 <hr>
                 <nav>
-                    <a href="<?php bloginfo("template_url")?>/home">
-                        <h2>Work</h2>
-                    </a>
-                    <a href="<?php bloginfo("template_url")?>/student-grid-page">
-                        <h2>Students</h2>
-                    </a>
-                    <a href="<?php bloginfo("template_url")?>/event-page">
-                        <h2>Event</h2>
-                    </a>
+
+                    <div class="navItem" id="navWork">
+                        <a href="<?php bloginfo("template_url")?>/home" id="navWorklink"><h2>Work</h2></a>
+                    </div>
+                    <div class="navItem" id="navStudents">
+                        <a href="<?php bloginfo("template_url")?>/student-grid-page" id="navStudentslink"><h2>Students</h2></a>
+                    </div>
+                    <div class="navItem" id="navEvent">
+                        <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2>Event</h2></a>
+                    </div>
+
                 </nav>
             </div>
 
