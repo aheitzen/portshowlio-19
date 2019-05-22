@@ -33,6 +33,7 @@
                 </div>
                 <hr>
                 <nav>
+
                     <div class="navItem" id="navWork">
                         <h2><a href="" id="navWorklink">Work</a></h2>
                     </div>
@@ -42,7 +43,6 @@
                     <div class="navItem" id="navEvent">
                         <h2><a href="" id="navEventlink">Event</a></h2>
                     </div>
-
                 </nav>
             </div>
 

@@ -1,3 +1,8 @@
+<?php 
+/* Template Name: Student Grid Page */ 
+?>
+<?php get_header(); ?>
+
 <div id="students">
     <div class="primary-nav">
         <img src="<?php the_field('image'); ?>" />
@@ -28,16 +33,6 @@
         <?php endwhile; ?>
     </div>
 
-    <div style="margin: 10em;">
-        <h1 class="text-large">This is large</h1>
-        <h1>This is h1</h1>
-        <h2>This is h2</h2>
-        <h3>This is h3</h3>
-        <p class="subhead">This is date / time / subhead</p>
-        <p>this is p</p>
-        <p class="text-small">This is small</p>
-    </div>
-
     <div class="search-filter">
         <p>
             Search: <input type="search" id="searchInput" size="30">
@@ -56,3 +51,4 @@
     </div>
 
 </div>
+<?php get_footer(); ?>

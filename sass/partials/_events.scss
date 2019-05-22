@@ -6,11 +6,6 @@
   justify-content: center;
   align-items: center;
 	text-align: center;
-	.big-404{
-		font-size: 15em;
-		margin: auto 0 0 0;
-    line-height: 30vh;
-	}
 }
 .page-content-404{
 	p{
@@ -37,12 +32,13 @@
 .ianfooter{
 	margin: 100px 0 0 0;
   background-color: $color__black;
-	height: 20vw;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-content: space-between;
+	flex-direction: row;
+	padding: 5% 10%;
 }
 .ianfooter .fab {
 	font-size: 45px;
@@ -54,44 +50,44 @@
 	color: $color__link-hover;
 }
 .footersocial {
-	padding: 4% 0;
-	width: 30vw;
-	height: 20vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
 	.footerrow {
 		display: flex;
 		flex-direction: row;
 		height: 50%;
+		width: 100%;
 		div {
-			float: left;
+			padding: 0 6%;
 		}
 	}
 }
-.thankyou{
-  padding: 0 8%;
-}
-.social_center {
-	width: 70%;
+.footerthankyou{
 	height: 100%;
-	margin: 0;
-	float: left;
+	padding-right: 5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 32px;
 	text-transform: uppercase;
 	font-family: SuisseWorks-Regular;
-	p{
-	font-family: SuisseWorks-Regular;
-	font-weight: bold;
-	font-size: 16px;
-	text-transform: none;
-  color: $color__white;
-	}
+		p{
+		font-family: SuisseWorks-Regular;
+		font-size: 0.44em;
+		text-transform: none;
+		color: $color__white;
+    line-height: 1.7em;
+		margin: auto;
+		}
 }
 .scca{
   a{
   text-decoration: none;
   color: $color__white;
+	font-weight: bold;
+  font-size: 1.7em;
   }
   a:hover{
   color: $color__link-hover;
@@ -107,44 +103,40 @@
   float: left;
 }
 
-@media all and (max-width: 991px) {
-	.social_center p {
-		font-size: 14px;
-	}
-}
+@media all and (max-width: 991px) {}
 @media all and (max-width: 767px) {
-	.footersocial {
-	padding: 0px;
-	width: 99vw;
-	height: auto;
-	.footerrow {
-		display: flex;
-		flex-direction: row;
-		height: 50vw;
-		}
-  }
-	.social_center {
-	padding: 20px;
-	width: 100%;
-	}
 	.ianfooter{
-	height: auto;
-	flex-direction: column-reverse;
-		width: 98vw;
-  }
-	.ianfooter .fab {
-	font-size: 60px;
-  }
+		padding: 10% 10%;
+		flex-direction: column;
+	}
+	.footerthankyou{
+		padding: 0 0 10% 0;
+			p{
+			text-align: center;
+			}
+	}
 }
 
 // EVENT PAGE SCSS STARTS HERE
-.dates{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  div{
-  margin: 0 5% 0 0;
+.homepage_video{
+	height: 100vh;
+	width: auto;
+}
+.wp-video{
+	width: 100% !important;
+	height: 100% !important;
+}
+.mejs-controls {
+  display: none !important;
+  visibility: hidden !important;
   }
+.event-dates{
+	h3{
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
 }
 .rowEvent{
   outline: none;
@@ -152,21 +144,58 @@
   flex-direction: row;
 }
 .rowEvent .cellEventIntro {
-    width: 70%;
     margin-left: 0;
     margin-right: 0;
+		padding-bottom: 5%;
+		h3{
+			margin: 0;
+      font-size: 2vw;
+		}
+		h1{
+			margin: 0;
+	    font-size: 4.5vw;
+		}
 }
 .rowEvent .cellEvent {
     width: 50%;
     margin-left: 0;
     margin-right: 0;
 }
-.event-section {
-  padding: 5% 5% 10% 5%;
+.event-intro, .event-floorplan, .event-lifevideo {
+  padding: 5% 10% 10% 10%;
+}
+.map-copy {
+  padding: 0 5% 8% 5%;
+	p{
+		line-height: 1.4em;
+	}
 }
 .space-top {
   padding-top: 18px;
 }
+.buttonDirections{
+	.buttonWrapper{
+		width: 100%;
+		margin: auto;
+	}
+}
+.event-floorplan, .event-lifevideo{
+	h3{
+		font-size: 2.5em;
+	}
+}
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%; }
+.embed-container iframe, .embed-container object, .embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; }
 
 @media all and (max-width: 991px) {
   .pop {
@@ -181,16 +210,23 @@
   }
 }
 @media all and (max-width: 767px) {
-  .pop {
-  font-size: 80px;
-  }
-  .para {
-  font-size: 16px;
-  }
-  .border-left {
-  border-left: none;
-  }
-}
+	.rowEvent{
+	  outline: none;
+	  display: flex;
+	  flex-direction: column;
+		justify-content: center;
+		}
+		.rowEvent .cellEvent {
+		    width: 100%;
+		    margin-left: 0;
+		    margin-right: 0;
+		    height: 50vh;
+		    margin-bottom: 10%;
+		}
+		.map-copy{
+			text-align: center;
+		}
+	}
 @media all and (max-width: 480px) {
   .pop {
   font-size: 80px;
