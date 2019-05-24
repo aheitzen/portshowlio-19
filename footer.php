@@ -42,7 +42,6 @@
 <!-- You should add Google Analytics here -->
 
 
-
 <?php wp_footer(); ?>
 
 </body>

@@ -14,6 +14,26 @@
     height: 25em;
 }
 
+.students-images__div {
+    .headshot {
+        display: inherit;
+    }
+
+    .headshot_hover {
+        display: none;
+    }
+}
+
+.students-images__div:hover {
+    .headshot {
+        display: none;
+    }
+
+    .headshot_hover {
+        display: inherit;
+    }
+}
+
 .students-focus {}
 
 
@@ -134,7 +154,8 @@ nav {
 //    background: $color__black;
 //}
 
-.navItem:hover, .navItemActive {
+.navItem:hover,
+.navItemActive {
     border-left: $color__black 20px solid;
     padding-left: 1em;
 }

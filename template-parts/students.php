@@ -22,7 +22,10 @@
         <div class="students-test">
             <a href="<?php the_permalink();?>">
                 <h2 class="students-names"><?php echo get_the_title( $post_id ); ?></h2>
-                <img class="students-images" src="<?php the_field('headshot'); ?>" />
+                <div class="students-images__div">
+                    <img class="students-images headshot" src="<?php the_field('headshot'); ?>" />
+                    <img class="students-images headshot_hover" src="<?php the_field('headshot_hover'); ?>" />
+                </div>
             </a>
             <p class="students-focus subhead"><?php the_field('focus'); ?></p>
             <div class="black-bar-long"></div>
@@ -38,7 +41,7 @@
             Search: <input type="search" id="searchInput" size="30">
         </p>
         <p>
-            Filter: 
+            Filter:
             <input class="radio" type="radio" id="filterAll" name="filter" value="0" checked="checked">
             <label for="filterAll">All</label>
 
