@@ -29,7 +29,7 @@
                 <hr>
                 <div id="show-details">
                     <h3 class="">June 12th & 13th</h3>
-                    <h4 class="subhead">6:00pm - 9:00pm</h4>
+                    <h4 class="subhead">5:00pm - 9:00pm</h4>
                 </div>
                 <hr>
                 <nav>
