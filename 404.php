@@ -16,7 +16,6 @@ get_header();
 					<div class="mouse-warp-404">
 						<h2 class="title-404" data-blotter>OOPS</h2>
 					</div>
-					<img src="http://localhost/portshowlio_site/wp-content/uploads/2019/05/404_Portshowlio.png"/>
 				</div>
 
 				<div class="page-content-404">
