@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+<?php 
+/* Template Name: Event Page */ 
+?>
+<?php get_header(); ?>
+
+<div class="homepage_video">
+  <?php
+  // Get the Video Fields
+  $video_mp4 =  get_field('homepage_video'); // MP4 Field Name
+  // Build the  Shortcode
+  $attr =  array(
+  'mp4'      => $video_mp4,
+  'preload'  => 'auto',
+  'loop'     => 'on',
+  'autoplay' => 'on',
+  'preload'  => 'auto'
+  );
+
+  // Display the Shortcode
+  echo wp_video_shortcode(  $attr );
+  ?>
+</div>
+
+>>>>>>> d8addef1d974f66dc37391555eb9c0a86523384d
 <div class="event-intro">
   <!-- INTRO SECTION -->
   <div class="container event-section">
@@ -21,6 +47,7 @@
         <div class="event-dates">
           <h3>June 13th & 14th</h3>
           <p>6:00 - 9:00PM</p>
+
         </div>
         <h5 class="space-top">Seattle Central College<br>1701 Broadway Ave<br>Seattle, WA 98122</h5>
         <p class="space-top">The Creative Academy portshowlio show is located on the 5th floor of Seattle Central College. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find paid parking in the lot.</p>
@@ -45,3 +72,4 @@
   </div>
 </div>
 <!-- END FLOOR PLANS -->
+<?php get_footer(); ?>
