@@ -72,7 +72,7 @@ body {
 
             .works-container {
                 img {
-                    max-height: 800px;
+                    max-height: 500px;
                     max-width: 100%;
                 }
             }
@@ -108,7 +108,11 @@ body {
 // }
 
 .secondary {
-    grid-column: span 3;
+    grid-column: span 2;
+}
+
+.project-links {
+    grid-column: span 1;
 }
 
 .imageGrid {
@@ -177,6 +181,23 @@ a:visited {
 
 }
 
+.single-post-headshot-sidenav {
+    height: auto;
+}
+
+.portfolio-site-link-style-sidenav {
+    text-align: left;
+    margin-bottom: 14px;
+    margin-top: 1em;
+}
+
+.socialSection-side-nav {
+    font-size: 7px;
+    text-align: left;
+}
+
+    
+
 .portfolio-site-link-style {
     color: black;
     font-size: 3em;
@@ -242,15 +263,15 @@ a:visited {
 	display: grid;
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: repeat(8, 1fr);
-	grid-gap: 3em;
-	margin-bottom: 3em;
+	// grid-gap: 3em;
+	// margin-bottom: 3em;
 	.imageGrid {
 		&:first-of-type {
 			grid-column: 2 / span 5;
 			grid-row: 1 / span 7;
 		}
 		img {
-			max-height: 800px;
+			max-height: 700px;
 			max-width: 100%;
 		}
 		&:nth-of-type(2) {
@@ -264,11 +285,13 @@ a:visited {
 	display: grid;
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: repeat(8, 1fr);
-	grid-gap: 3em;
-	margin-bottom: 3em;
+	// grid-gap: 3em;
+	// margin-bottom: 3em;
+    margin: 5em;
+    margin-bottom: 2em;
 	.imageGrid {
 		&:first-of-type {
-			grid-column: 2 / span 5;
+			grid-column: 1 / span 6;
 			grid-row: 1 / span 7;
 		}
 		img {
@@ -276,8 +299,8 @@ a:visited {
 			max-width: 100%;
 		}
 		&:nth-of-type(2) {
-			grid-column: 8 / span 5;
-			grid-row: 3 / span 7;
+			grid-column: 8 / span 6;
+			grid-row: 2 / span 7;
 		}
 	}
 }
@@ -319,8 +342,8 @@ a:visited {
     //         grid-row: span 7;
     //     }
         img {
-            height: 600px;
-            width: 900px;
+            height: 700px;
+            // width: 900px;
         }
         // &:nth-of-type(even) {
         //     grid-column: 8 / span 5;
@@ -333,6 +356,7 @@ a:visited {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(auto, 1fr);
+    margin: 5em;
     .featured-project-image {
         max-height: 800px;
         max-width: 100%;
@@ -342,13 +366,13 @@ a:visited {
 }
 
 .featured-project-image-top {
-    grid-column: 8 / span 5;
+    grid-column: 7 / span 7;
+ 
 }
 
 .featured-project-type {
-    grid-column: 1 / span 6;
-    margin-left: 4em;
     color: black;
+    grid-column: 1 / span 5;
 }
 
 .project-title-student-single {

@@ -51,10 +51,10 @@
                     <p id="name"></p>
                 </div>
                 <div id="student" class="hideNav">
-                    <img class="single-post-headshot" src="<?php the_field('headshot'); ?>" />
-                    <br>
-                    <p class="portfolio-site-link-style"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
-                    <div class='socialSection'>
+                    <img class="single-post-headshot-sidenav" src="<?php the_field('headshot'); ?>" />
+                   <!--  <br> -->
+                    <p class="portfolio-site-link-style-sidenav"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
+                    <div class='socialSection-side-nav'>
                         <?php if( get_field('facebook_page') ): ?>
                             <a class='socialIcon' href='<?php the_field('facebook_page')?>' target='_blank'><i class="fab fa-facebook-f"></i></a>
                         <?php endif; ?>
@@ -79,6 +79,9 @@
                         <?php if( get_field('vimeo_page') ): ?>
                             <a class='socialIcon' href='<?php the_field('vimeo_page')?>' target='_blank'><i class="fab fa-vimeo-v"></i></a>
                         <?php endif; ?>
+                    </div>
+                    <div id="side-nav-project-links">
+                        <ul></ul>
                     </div>
                 </div>
                 

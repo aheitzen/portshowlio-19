@@ -56,30 +56,19 @@
 					<a class='socialIcon' href='<?php the_field('vimeo_page')?>' target='_blank'><i class="fab fa-vimeo-v"></i></a>
 				<?php endif; ?>
 			</div>
+		</div>
+		<div id='project-links'>
+			<ul>
 				
-		
-		<!-- <div class='projectSelectorHeader'>
-			<?#php if( have_rows('projects') ): ?>
-				<?#php while ( have_rows('projects') ) : the_row(); ?>
-					<?#php if( get_row_layout() == 'project' ): ?>
-						<a href="#<?#php echo $FileName = get_sub_field('project_title'); ?>"  class='projectSelectorNameHeader'>
-							<?#php the_sub_field('project_title'); ?>
-							</a>
-					<?#php endif; ?>
-				<?#php endwhile; ?>
-			<?#php endif; ?>
-		</div> -->
-
-		
-
-		
+			</ul>
 		</div>
 	</div>
 <div class="black-divider-line"></div>
 <?php if( have_rows('projects') ): ?>
-	<?php while ( have_rows('projects') ) : the_row(); ?>
+	<?php $row=0; ?>
+	<?php while ( have_rows('projects') ) : the_row(); $row++; ?>
 		<?php if( get_row_layout() == 'project' ): ?>
-			<div class="featured-project">
+			<div class="featured-project" id="project-<?php echo $row; ?>">
 				<div class="featured-project-type">
 					<h3 class="project-title-student-single"><?php the_sub_field('project_title'); ?></h3>
 					<p class="paragraph-project-type"><?php the_sub_field('project_type'); ?></p>
@@ -172,17 +161,30 @@
 
 <script>
 	$(document).scroll(function() {
-  var y = $(this).scrollTop();
-  if (y > 316) {
-	  $('#sidebar-nav #student').removeClass('hideNav');
-	  $('#sidebar-nav #student').addClass('showNav');
-	 
-  } else {
-	  $('#sidebar-nav #student').removeClass('showNav');
-	$('#sidebar-nav #student').addClass('hideNav');
-	  
-  }
-});
+	  var y = $(this).scrollTop();
+	  if (y > 300) {
+		  $('#sidebar-nav #student').removeClass('hideNav');
+		  $('#sidebar-nav #student').addClass('showNav');
+		 
+	  } else {
+		  $('#sidebar-nav #student').removeClass('showNav');
+		$('#sidebar-nav #student').addClass('hideNav');
+		  
+	  }
+	});
+
+	$(document).ready(function () {
+		var projects = $('.featured-project');
+		var projectLinkContainer = $('#project-links ul');
+		var sideNavLinkContainer = $('#student #side-nav-project-links ul');
+	
+		projects.each(function (index) {
+			var projectTitle = $(this).find('.project-title-student-single').text();
+			var newLink = '<a href="#' + this.id + '"><li>' + projectTitle + '</li></a>';
+			projectLinkContainer.append(newLink);
+			sideNavLinkContainer.append(newLink);
+		});
+	})
 </script>
 
 <div class="bottom-student-navigation">

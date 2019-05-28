@@ -210,7 +210,7 @@ nav {
         align-items: start;
     }
 
-    .students-test:nth-of-type(n) {
+    .students:nth-of-type(n) {
         grid-column-start: 2;
     }
 
@@ -249,11 +249,11 @@ nav {
         align-items: start;
     }
 
-    .students-test:nth-of-type(odd) {
+    .students:nth-of-type(odd) {
         grid-column-start: 2;
     }
 
-    .students-test:nth-of-type(even) {
+    .students:nth-of-type(even) {
         grid-column-start: 3;
         align-self: end;
     }
@@ -281,16 +281,16 @@ nav {
         align-items: start;
     }
 
-    .students-test:nth-of-type(3n-2) {
+    .students:nth-of-type(3n-2) {
         grid-column-start: 2;
     }
 
-    .students-test:nth-of-type(3n-1) {
+    .students:nth-of-type(3n-1) {
         grid-column-start: 3;
         align-self: end;
     }
 
-    .students-test:nth-of-type(3n) {
+    .students:nth-of-type(3n) {
         grid-column-start: 4;
     }
 }
