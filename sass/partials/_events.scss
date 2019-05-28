@@ -1,30 +1,109 @@
 // 404 STARTS HERE
 .content-404 {
-	height: 100vh;
-	width: auto;
+	height: 60vh;
+	width: 80vw;
+	margin: auto;
+	margin-top: 5%;
 	display: flex;
   justify-content: center;
   align-items: center;
 	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('http://localhost/portshowlio_site/wp-content/uploads/2019/05/404_Portshowlio.png');
+}
+.header-404{
+	width: 50%;
+	margin: auto;
+	padding-top: 10%;
 }
 .page-content-404{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	h2{
+		margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 11vw;
+		color: $color__cyan;
+	}
 	p{
+		padding-top: 3%;
 		font-size: 1.5em;
 		line-height: 28px;
-		width: 39%;
-		margin: auto;
+		width: 45%;
+    margin-right: 10%;
 	}
 }
 .buttonWrapper{
-	width: 50%;
-	margin: auto;
-	padding: 5% 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	a{
 		border-style: solid;
-		padding: 3%;
+    padding: 8% 15%;
 		text-decoration: none;
 		background-color: $color__black;
 		color: $color__white;
+	}
+}
+.mouse-warp-404{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 30%;
+}
+
+@media all and (max-width: 767px) {
+	.mouse-warp-404{
+		display: none;
+	}
+	.header-404{
+		display: flex;
+		width: 50%;
+		margin: auto;
+		padding-top: 10%;
+		height: 80vh;
+	}
+	.page-content-404{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.page-content-404 p {
+		padding-top: 3%;
+		font-size: 1.5em;
+		line-height: 28px;
+		width: 80%;
+		padding-bottom: 10%;
+		margin: auto;
+	}
+	.buttonWrapper{
+		a{
+	    padding: 4% 7%;
+		}
+	}
+}
+@media all and (max-width: 484px){
+	.page-content-404{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.page-content-404 p {
+    padding-top: 3%;
+    font-size: 1.5em;
+    line-height: 28px;
+    width: 100%;
+    margin-right: auto;
 	}
 }
 
@@ -42,12 +121,13 @@
 }
 .ianfooter .fab {
 	font-size: 45px;
+	padding-bottom: 10%;
 }
 .ianfooter a .fab {
 	color: $color__white;
 }
 .ianfooter a .fab:hover {
-	color: $color__link-hover;
+	border-bottom: 2px solid;
 }
 .footersocial {
 	display: flex;
@@ -90,7 +170,7 @@
   font-size: 1.7em;
   }
   a:hover{
-  color: $color__link-hover;
+  border-bottom: 2px solid;
   }
 }
 .socialoutline {
@@ -116,20 +196,13 @@
 			}
 	}
 }
+@media all and (max-width: 480px) {
+	.footersocial {
+		padding-top: 5%
+	}
+}
 
 // EVENT PAGE SCSS STARTS HERE
-.homepage_video{
-	height: 100vh;
-	width: auto;
-}
-.wp-video{
-	width: 100% !important;
-	height: 100% !important;
-}
-.mejs-controls {
-  display: none !important;
-  visibility: hidden !important;
-  }
 .event-dates{
 	h3{
 		margin: 0;
@@ -161,8 +234,11 @@
     margin-left: 0;
     margin-right: 0;
 }
-.event-intro, .event-floorplan, .event-lifevideo {
-  padding: 5% 10% 10% 10%;
+.event-intro {
+  padding: 10% 10% 10% 10%;
+}
+.event-floorplan {
+	padding: 0% 10% 10% 10%;
 }
 .map-copy {
   padding: 0 5% 8% 5%;
@@ -179,9 +255,9 @@
 		margin: auto;
 	}
 }
-.event-floorplan, .event-lifevideo{
+.event-floorplan {
 	h3{
-		font-size: 2.5em;
+		font-size: 3vw;
 	}
 }
 .embed-container {
@@ -198,16 +274,7 @@
 	height: 100%; }
 
 @media all and (max-width: 991px) {
-  .pop {
-  font-size: 90px;
-  line-height: 1.1;
-  }
-  .para {
-  padding-right: 0%;
-  font-size: 20px;
-  line-height: 1.8;
-  font-family: HalisR;
-  }
+
 }
 @media all and (max-width: 767px) {
 	.rowEvent{
@@ -226,15 +293,45 @@
 		.map-copy{
 			text-align: center;
 		}
+		.event-floorplan{
+			h3{
+				font-size: 4vw;
+				text-align: center;
+			}
+		}
+		.rowEvent .cellEventIntro {
+				text-align: center;
+				padding-bottom: 15%;
+				h3{
+					margin: 0;
+					font-size: 3vw;
+				}
+				h1{
+					margin: 0;
+					font-size: 5vw;
+				}
+		}
+		.map{
+			padding-bottom: 15%;
+		}
 	}
 @media all and (max-width: 480px) {
-  .pop {
-  font-size: 80px;
-  }
-  .para {
-  font-size: 16px;
-  }
-  .border-left {
-  border-left: none;
-  }
+	.rowEvent .cellEventIntro {
+			text-align: center;
+			padding-bottom: 15%;
+			h3{
+				margin: 0;
+	      font-size: 3vw;
+			}
+			h1{
+				margin: 0;
+		    font-size: 5vw;
+			}
+	}
+	.event-floorplan{
+		h3{
+			font-size: 4vw;
+			text-align: center;
+		}
+	}
 }

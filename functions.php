@@ -128,11 +128,27 @@ function portshowlio_scripts() {
 
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
+	// wp_enqueue_script( 'blotter', get_template_directory_uri() . '/js/blotter.min.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'liquid-distort', get_template_directory_uri() . '/js/liquidDistortMaterial.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'liquid-interact', get_template_directory_uri() . '/js/liquidinteract.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'three', get_template_directory_uri() . '/js/three.min.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'underscore', get_template_directory_uri() . '/js/underscore-min.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'GLManager', get_template_directory_uri() . '/js/GLManager.js', array(), '20151215', true );
+	//
+	// wp_enqueue_script( 'shaders', get_template_directory_uri() . '/js/shaders.js', array(), '20151215', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'portshowlio_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
