@@ -24,18 +24,21 @@ h1 {
     text-transform: uppercase;
     font-size: 5em;
     line-height: 1.04em;
+    color: black;
 }
 
 h2 {
     font-family: 'SuisseIntl-SemiBold';
     font-size: 4em;
     line-height: 1.12em;
+    color: black;
 }
 
 h3 {
     font-family: 'SuisseIntl-SemiBold';
     font-size: 3em;
     line-height: 1.17em;
+    color: black;
 }
 
 .date,
@@ -44,6 +47,7 @@ h3 {
     // font-family: 'SuisseWorks-RegularItalic';
     font-size: 2.2em;
     line-height: 1.15em;
+    color: black;
 }
 
 p {
@@ -62,4 +66,8 @@ p {
 input[type=search] {
     font-family: 'SuisseIntl-Book';
     font-size: 1em;
+}
+
+.students.hide {
+    display: none;
 }
