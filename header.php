@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image" href="<?php the_field('favicon'); ?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <?php wp_head(); ?>
 </head>
@@ -29,8 +30,8 @@
                 <a href=""><img id="logo" src="<?php the_field('portshowlio_logo'); ?>" /></a>
                 <hr>
                 <div id="show-details">
-                    <h3 class="">June 13th & 14th</h3>
-                    <h4 class="subhead">6:00pm - 9:00pm</h4>
+                    <h3 class="">June 12th & 13th</h3>
+                    <h4 class="subhead">5:00pm - 9:00pm</h4>
                 </div>
                 <hr>
                 <nav>
@@ -44,7 +45,6 @@
                     <div class="navItem" id="navEvent">
                         <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
                     </div>
-
                 </nav>
                 <div id="works-student" class="hideNav">
                     <img id="headshot" src="" />
