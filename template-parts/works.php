@@ -39,7 +39,7 @@
 		<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<div class="works-grid-inner-container">
 				<div class="works-grid">
-					<div class="works-container" onmouseover="onWorkHover('<?php the_title(); ?>', '<?php the_field('headshot'); ?>')" onmouseleave="onWorkLeave()">
+					<div class="works-container" onmouseover="onWorkHover('<?php the_title(); ?>', '<?php the_field('headshot_hover'); ?>')" onmouseleave="onWorkLeave()">
 						<a href="<?php the_permalink(); ?>">
 							<img class="works-images" src="<?php the_field('featured_image'); ?>" />
 							<h2 class="project-title"><?php the_field('project_title'); ?></h2>

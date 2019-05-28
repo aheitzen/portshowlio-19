@@ -36,13 +36,13 @@
                 <nav>
 
                     <div class="navItem" id="navWork">
-                        <a href="<?php bloginfo("template_url")?>/home" id="navWorklink"><h2>Work</h2></a>
+                        <a href="<?php bloginfo("template_url")?>/home" id="navWorklink"><h2 class="primary-nav-items">Work</h2></a>
                     </div>
                     <div class="navItem" id="navStudents">
-                        <a href="<?php bloginfo("template_url")?>/student-grid-page" id="navStudentslink"><h2>Students</h2></a>
+                        <a href="<?php bloginfo("template_url")?>/student-grid-page" id="navStudentslink"><h2 class="primary-nav-items">Students</h2></a>
                     </div>
                     <div class="navItem" id="navEvent">
-                        <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2>Event</h2></a>
+                        <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
                     </div>
 
                 </nav>
@@ -51,7 +51,7 @@
                     <p id="name"></p>
                 </div>
                 <div id="student" class="hideNav">
-                    <img class="single-post-headshot-sidenav" src="<?php the_field('headshot'); ?>" />
+                    <img class="single-post-headshot-sidenav" src="<?php the_field('headshot_hover'); ?>" />
                    <!--  <br> -->
                     <p class="portfolio-site-link-style-sidenav"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
                     <div class='socialSection-side-nav'>
@@ -81,7 +81,7 @@
                         <?php endif; ?>
                     </div>
                     <div id="side-nav-project-links">
-                        <ul></ul>
+                        <ul class="ultra-small-side-nav"></ul>
                     </div>
                 </div>
                 
