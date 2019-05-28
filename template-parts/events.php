@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php 
 /* Template Name: Event Page */ 
 ?>
@@ -23,7 +22,6 @@
   ?>
 </div>
 
->>>>>>> d8addef1d974f66dc37391555eb9c0a86523384d
 <div class="event-intro">
   <!-- INTRO SECTION -->
   <div class="container event-section">
