@@ -190,7 +190,7 @@
 		var projects = $('.featured-project');
 		var projectLinkContainer = $('#project-links ul');
 		var sideNavLinkContainer = $('#student #side-nav-project-links ul');
-	
+
 		projects.each(function (index) {
 			var projectTitle = $(this).find('.project-title-student-single').text();
 			var newLink = '<li onclick="projectLinkClicked(\'#' + this.id + '\')">' + projectTitle + '</li>';
