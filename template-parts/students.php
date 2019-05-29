@@ -22,14 +22,9 @@
         <div class="students">
             <a href="<?php the_permalink();?>">
                 <h2 class="students-names"><?php echo get_the_title( $post_id ); ?></h2>
-<<<<<<< HEAD
                 <div class="students-images__div">
-                    <img class="students-images headshot" src="<?php the_field('headshot'); ?>" />
-                    <img class="students-images headshot_hover" src="<?php the_field('headshot_hover'); ?>" />
+                    <img class="students-images headshot" onmouseover="onHoverStudent(this, '<?php the_field('headshot_hover'); ?>')" onmouseleave="onLeaveStudent(this, '<?php the_field('headshot'); ?>')" src="<?php the_field('headshot'); ?>" />
                 </div>
-=======
-                <img class="students-images" onmouseover="onHoverStudent(this, '<?php the_field('headshot_hover'); ?>')" onmouseleave="onLeaveStudent(this, '<?php the_field('headshot'); ?>')" src="<?php the_field('headshot'); ?>" />
->>>>>>> dev
             </a>
             <p class="students-focus subhead"><?php the_field('focus'); ?></p>
             <div class="black-bar-long"></div>
@@ -59,9 +54,6 @@
     </div>
 
 </div>
-<<<<<<< HEAD
-<?php get_footer(); ?>
-=======
 
 <script type="text/javascript">
     function onHoverStudent(element, hoverImage) {
@@ -171,4 +163,3 @@
 </script>
 
 <?php get_footer(); ?>
->>>>>>> dev
