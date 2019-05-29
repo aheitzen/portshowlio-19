@@ -27,22 +27,22 @@
     <div id="page" class="site">
         <header>
             <div class="primary-navigation" id="sidebar-nav">
-                <a href=""><img id="logo" src="<?php the_field('portshowlio_logo'); ?>" /></a>
-                <hr>
+                <a href=""><img id="logo" src="<?php header_image(); ?>" /></a>
+                <!-- <hr> -->
                 <div id="show-details">
-                    <h3 class="">June 12th & 13th</h3>
+                    <h3 class="date-ui">June 12th & 13th</h3>
                     <h4 class="subhead">5:00pm - 9:00pm</h4>
                 </div>
-                <hr>
+                <!-- <hr> -->
                 <nav>
-
-                    <div class="navItem" id="navWork">
+                    <?php $location=basename(get_permalink()); ?>
+                    <div class="navItem <?php if($location == 'home'): echo 'active'; endif; ?>" id="navWork">
                         <a href="<?php bloginfo("template_url")?>/home" id="navWorklink"><h2 class="primary-nav-items">Work</h2></a>
                     </div>
-                    <div class="navItem" id="navStudents">
+                    <div class="navItem <?php if($location == 'student-grid-page'): echo 'active'; endif; ?>" id="navStudents">
                         <a href="<?php bloginfo("template_url")?>/student-grid-page" id="navStudentslink"><h2 class="primary-nav-items">Students</h2></a>
                     </div>
-                    <div class="navItem" id="navEvent">
+                    <div class="navItem <?php if($location == 'event-page'): echo 'active'; endif; ?>" id="navEvent">
                         <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
                     </div>
                 </nav>
@@ -80,9 +80,9 @@
                             <a class='socialIcon' href='<?php the_field('vimeo_page')?>' target='_blank'><i class="fab fa-vimeo-v"></i></a>
                         <?php endif; ?>
                     </div>
-                    <div id="side-nav-project-links">
+                    <!-- <div id="side-nav-project-links">
                         <ul class="ultra-small-side-nav"></ul>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>

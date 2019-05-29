@@ -21,6 +21,7 @@ body {
     color: black;
     margin-bottom: 0;
     margin-top: 0;
+
 }
 
 .black-bar {
@@ -171,6 +172,7 @@ a:visited {
 	color: $color__black;
 	font-size: 4.5em;
     margin-bottom: 0;
+    margin-top: 24px;
 }
 
 .single-post-headshot {
@@ -191,7 +193,7 @@ a:visited {
 .portfolio-site-link-style-sidenav {
     text-align: left;
     margin-bottom: 14px;
-    margin-top: 1em;
+    margin-top: 10px;
     color: black;
 }
 
@@ -204,9 +206,13 @@ a:visited {
 
 .portfolio-site-link-style {
     color: black;
-    font-size: 3em;
+    // font-size: 3em;
+    font-size: 2.8em;
     margin-bottom: 1em;
-    margin-top: 3em;
+    // margin-top: 3em;
+    // margin-top: 3.5em;
+    // margin-top: 2.5em;
+        margin-top: 20px;
 }
 
 .student-post-page-grid {
@@ -224,13 +230,15 @@ a:visited {
 	    margin-bottom: 0;
 	    font-size: 2em;
 	    color: $color__black;
+
 }
 
 
 .three-categories-focus {
     grid-column-start: 2;
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
+    // margin-left: -1em;
 }
 
 .siteLink {
@@ -248,7 +256,8 @@ a:visited {
 .fab {
 	font-size: 2.5em;
 	color: $color__black;
-    font-size: 3em;
+    font-size: 2.5em;
+        // font-size: 6px;
     color: #191919;
     margin-right: 20px;
 }
@@ -335,7 +344,8 @@ a:visited {
             margin: 0;
         }
         iframe {
-            width: 100%;
+            height: 100% !important;
+            width: 100% !important;
         }
     }
 }
@@ -380,28 +390,30 @@ a:visited {
 .project-title-student-single {
     font-size: 5em;
     margin-bottom: 0;
+    margin-top: 30px;
 }
 
 .paragraph-project-type {
     margin-top: 10px;
-    font-size: 2.5em;
+    font-size: 3.5em;
+    margin-bottom: 18px;
 }
 
 .primary-nav-items:hover {
     text-decoration: underline;
     border-bottom: 4px;
-    text-underline-position: under;
+    // text-underline-position: under;
 }
 
 .small-nav-student-post-page {
         list-style-type: none;
     font-family: 'SuisseIntl-Book';
     color: black;
-    font-size: 2.8em;
+    font-size: 20px;
     text-align: right;
     margin-right: 2em;
     margin-left: 0;
-    margin-top: 30px;
+        margin-top: 30px;
 }
 
 .ultra-small-side-nav {
@@ -423,4 +435,158 @@ a:visited {
             cursor: pointer;
         }
     }
+}
+
+.projects-h3-style {
+    text-align: right;
+    margin-right: 2em;
+    margin-bottom: 0;
+    margin-top: 1.9em;
+}
+
+a.collaborators.siteLink {
+    // display: inherit;
+    font-family: 'SuisseIntl-Book';
+    font-size: 2.4em;
+    line-height: 1.21em;
+    // text-decoration: underline;
+    font-size: 18px;
+    margin-top: 12px;
+    // font-family: SuisseIntl-Light;
+
+}
+
+.collaboratortitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.projectDescription {
+    font-size: 1em;
+    margin-top: 18px;
+    width: 50%;
+}
+
+.black-bar-collab {
+    background-color: black;
+    margin-top: 5px;
+    height: 2px;
+    width: 30em;
+}
+
+// .projectDescription {
+//     font-size: 2em;
+// }
+
+// a.collaborators.siteLink:hover {
+
+// }
+
+h4.subhead {
+    margin-top: 1em;
+    // margin-bottom: 1em;
+        margin-bottom: 2em;
+}
+
+.date-ui {
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+
+/*MEDIA QUERIES MOBILE*/
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 500px) {
+    .bottom-student-navigation {
+        width: 100%;
+    }
+    div#sidebar-nav {
+        border: none;
+    }
+    .small-nav-student-post-page {
+        display: none;
+    }
+    .single-post-headshot {
+        grid-column: 1 / span 5;
+    }
+    .secondary {
+        grid-column: 7/span 4;
+    }
+    .single-post-h2 {
+        margin-top: 0;
+    }
+    .portfolio-site-link-style {
+        margin-bottom: 8px;
+        margin-top: 15px;
+    }
+    .featured-project {
+        display: flex;
+        margin-right: 66px;
+        width: calc(100% - 66px - 6em);
+        margin-left: 6em;
+        margin-top: 3em;
+    }
+    .projectDescription {
+        width: 100%;
+    }
+    .grid-horizontal-two {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: calc(100% - 20px);
+        height: 100%;
+        margin: 10px;
+    }
+    .grid-verticle-two {
+        width: calc(100% - 20px);
+        margin: 10px;
+        flex-direction: column;
+        .imageGrid {
+            flex: 0 calc(50% - 5px);
+            margin: 10px 0 0;
+            &:nth-of-type(odd) {
+                margin-right: 0;
+            }
+        }
+    }
+    .grid-horizontal-two .imageGrid:nth-of-type(odd) {
+        margin: 0;
+        margin-top: 30px;
+    }
+    .grid-full-width {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    .grid-landscape {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    .grid-video {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    #sidebar-nav .showNav {
+        display: none;
+    }
+}
+/*IPAD MEDIA QUERY*/
+@media only screen
+and (min-width : 768px) 
+and (max-width : 1024px) {
+    
+}
+
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 767px) {
+   
+    
+}
+/*IPAD PRO AND LARGER TABLETS*/
+@media only screen 
+and (min-width : 1024px) 
+and (max-width : 1366px) {
+    
 }
