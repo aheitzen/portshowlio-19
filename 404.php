@@ -28,7 +28,7 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/blotter.min.js'></script>
+	<script src='/portshowlio19-master/wp-content/themes/portshowlio19-master/js/blotter.min.js'></script>
 	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/liquidDistortMaterial.js'></script>
 	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/liquidinteract.js'></script>
 	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/three.min.js'></script>

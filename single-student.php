@@ -15,12 +15,12 @@
 						$i = 0;
 					?>
 					<?php foreach( $focus as $focus ): ?>
-							<p class='focus'>&nbsp;
+							<p class='focus'><!-- &nbsp; -->
 								<?php 
 									echo $focus;
-									if(++$i !== $numItems) {
-		    							echo "&nbsp;&#8212;";
-		  							}
+									// if(++$i !== $numItems) {
+		    			// 				echo "&nbsp;&#8212;";
+		  					// 		}
 		  						?>
 	  						</p>
 					<?php endforeach; ?>
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div id='project-links'>
-			<h3>Projects</h3>
+			<!-- <h3 class="projects-h3-style">Projects</h3> -->
 			<ul class="small-nav-student-post-page">
 				
 			</ul>
@@ -71,51 +71,35 @@
 			<div class="black-divider-line"></div>
 			<?php if( get_row_layout() == 'project' ): ?>
 				<div class="featured-project" id="project-<?php echo $row; ?>">
-					<?php if($row % 2 == 0): ?>
-						<div class="featured-project-image-top">
-							<img class ="featured-project-image" src="<?php the_sub_field('single_student_featured_img'); ?>" />
-						</div>
-					<?php endif; ?>
-
 					<div class="featured-project-type">
 						<h3 class="project-title-student-single"><?php the_sub_field('project_title'); ?></h3>
 						<p class="paragraph-project-type"><?php the_sub_field('project_type'); ?></p>
-						
+						<div class="black-bar-collab"></div>
+						<div class="projectDescription"><?php the_sub_field('project_description'); ?></div>
 						<?php if( get_sub_field('collaborators') ): ?>
-							<p class="collaboratortitle">Collaborators</p>
+							<p class="collaboratortitle">Collaborators:</p>
 			 			<?php endif; ?>
 						<?php 
 							$post_objects = get_sub_field('collaborators'); 
 							if( $post_objects ): 
+								$c=0;
 						?>
 							<?php foreach( $post_objects as $post): ?>
 								<?php setup_postdata($post); ?>
-									<a class="collaborators siteLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									<a class="collaborators siteLink" href="<?php the_permalink(); ?>">
+										<?php the_title(); ?>
+										<?php if($c+1<count($post_objects)): ?>
+											&nbsp;|&nbsp;
+										<?php endif; $c++; ?>
+									</a>
 							<?php endforeach; ?>
 							<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
-						<p class="projectDescription"><?php the_sub_field('project_description'); ?></p>
 					</div>
-
-					<?php if($row % 2 == 1): ?>
-						<div class="featured-project-image-top">
-							<img class ="featured-project-image" src="<?php the_sub_field('single_student_featured_img'); ?>" />
-						</div>
-					<?php endif; ?>
-
 				</div>	
 				<div class="project-images">
-					<!--2 COLUMN VERTICAL LAYOUT -->
-					<div class="rowProject grid-verticle-two">
-						<?php if (have_rows('add_vertical_images')) : ?>
-							<?php while ( have_rows('add_vertical_images') ) : the_row(); ?>
-								<div class="imageThird imageGrid">
-									<?php $imageurl = get_sub_field('add_vertical_image'); ?>
-									<img src="<?php echo $imageurl; ?>" />
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</div>
+					
+					
 
 					<!--2 COLUMN HORIZONTAL LAYOUT -->
 					<div class="rowProject grid-horizontal-two">
@@ -123,6 +107,17 @@
 							<?php while ( have_rows('add_horizontal_images') ) : the_row(); ?>
 								<div class="imageGrid">
 									<?php $imageurl = get_sub_field('horizontal_image'); ?>
+									<img src="<?php echo $imageurl; ?>" />
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
+					<!--2 COLUMN VERTICAL LAYOUT -->
+					<div class="rowProject grid-verticle-two">
+						<?php if (have_rows('add_vertical_images')) : ?>
+							<?php while ( have_rows('add_vertical_images') ) : the_row(); ?>
+								<div class="imageThird imageGrid">
+									<?php $imageurl = get_sub_field('add_vertical_image'); ?>
 									<img src="<?php echo $imageurl; ?>" />
 								</div>
 							<?php endwhile; ?>
