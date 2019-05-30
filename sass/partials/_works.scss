@@ -45,7 +45,14 @@ body {
 //     align-items: center;
 // }
 
-
+#works-student {
+    #name {
+        text-align: center;
+        color: black;
+        font-size: 3em;
+        margin-top: 5px;
+    }
+}
 
 
 .works-grid-container {
@@ -503,6 +510,14 @@ div#navStudents:hover {
     border-left: none;
 }
 
+// FOOTER
+// .footer-copy {
+//     font-family: 'SuisseIntl-Book';
+//     font-size: 2em;
+//     line-height: 1.21em; 
+// }
+    
+
 // SPLASH PAGE CODE
 .temp-h1 {
     text-align: center;
@@ -611,23 +626,32 @@ div#navStudents:hover {
     #sidebar-nav .showNav {
         display: none;
     }
+    #content.no-nav {
+        margin-top: 0;
+    }
 }
 /*IPAD MEDIA QUERY*/
 @media only screen
 and (min-width : 768px) 
 and (max-width : 1024px) {
-    
+   #content.no-nav {
+        margin-top: 0;
+    } 
 }
 
 @media only screen 
 and (min-width : 481px) 
 and (max-width : 767px) {
-   
+   #content.no-nav {
+        margin-top: 0;
+    }
     
 }
 /*IPAD PRO AND LARGER TABLETS*/
 @media only screen 
 and (min-width : 1024px) 
 and (max-width : 1366px) {
-    
+    #content.no-nav {
+        margin-top: 0;
+    }
 }
