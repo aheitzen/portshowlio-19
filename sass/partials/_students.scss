@@ -358,11 +358,12 @@ nav {
         display: grid;
         grid-template-columns: 5em 1fr 1fr 1fr 5em;
         grid-column-gap: 5em;
-        //        grid-template-rows: repeat(auto-fill, fr);
-        grid-auto-rows: minmax(min-content, 45vw);
+        // LOOK HERE: EVEN OR ODD SECOND OPINION
+        grid-auto-rows: minmax(min-content, 33vw);
         grid-row-gap: 5em;
         justify-items: center;
         align-items: start;
+        margin-bottom: 10em;
     }
 
     .students:nth-of-type(3n-2) {

@@ -42,17 +42,11 @@
 	}
 }
 .buttonWrapper{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	a{
-		border-style: solid;
-    padding: 8% 15%;
-		text-decoration: none;
-		background-color: $color__black;
-		color: $color__white;
-	}
+	margin-top: 4em;
+	
 }
+
+
 .mouse-warp-404{
 	display: flex;
 	justify-content: center;
@@ -60,6 +54,17 @@
 	height: 100%;
 	width: 100%;
 	padding-top: 30%;
+}
+
+.event-button {
+	background-color: black;
+    color: #FBF9F4;
+    border-radius: 0;
+    border: none;
+    height: 2.5em;
+    width: 8.5em;
+    font-family: 'SuisseIntl-Book';
+    padding-top: 6px;
 }
 
 @media all and (max-width: 767px) {
@@ -248,23 +253,41 @@
 }
 .map-copy {
   padding: 0 5% 8% 5%;
-	p{
-		line-height: 1.4em;
+	p {
+	font-family: 'SuisseIntl-Book';
+    font-size: 2em;
+    line-height: 1.21em;
+    color: #191919;
+    margin-top: 0;
 	}
 }
 .space-top {
-  padding-top: 18px;
+ 	padding-top: 18px;
+  	font-family: 'SuisseIntl-Book';
+    font-size: 2em;
+    line-height: 1.21em;
+    color: #191919;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .buttonDirections{
-	.buttonWrapper{
-		width: 100%;
-		margin: auto;
-	}
+	// .buttonWrapper{
+	// 	width: 100%;
+	// 	margin: auto;
+	// }
+}
+
+.event-floor-plan-header {
+	margin-top: -10px;
 }
 .event-floorplan {
 	h3{
 		font-size: 3vw;
 	}
+}
+
+.seattle-presents {
+	margin-bottom: 14px;
 }
 .embed-container {
 	position: relative;

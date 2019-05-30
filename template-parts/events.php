@@ -27,7 +27,7 @@
   <div class="container event-section">
     <div class="rowEvent">
       <div class="cellEventIntro">
-        <h3>Seattle Central Creative Academy Presents</h3>
+        <h3 class="seattle-presents">Seattle Central Creative Academy Presents</h3>
         <h1>The Graduating Class Of 2019</h1>
       </div>
     </div>
@@ -51,7 +51,9 @@
         <p class="space-top">The Creative Academy portshowlio show is located on the 5th floor of Seattle Central College. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find paid parking in the lot.</p>
         <span class="buttonDirections">
           <div class="buttonWrapper">
-          <strong><a href="https://www.google.com/maps/dir//47.6162684,-122.3215842/@47.616268,-122.321584,16z?hl=en-US" target="_blank">Directions</a></strong>
+          <button class="event-button">
+            <a class="event-button-link" href="https://www.google.com/maps/dir//47.6162684,-122.3215842/@47.616268,-122.321584,16z?hl=en-US" target="_blank">Directions</a>
+          </button>
           </div>
         </span>
       </div>
@@ -64,7 +66,7 @@
 <div class="container event-floorplan">
   <div class="row">
     <div class="cell event">
-      <h3>Event Floor Plan</h3>
+      <h3 class="event-floor-plan-header">Event Floor Plan</h3>
       <img src="<?php the_field('show_map'); ?>" alt="" />
     </div>
   </div>
