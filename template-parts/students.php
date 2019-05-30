@@ -22,7 +22,7 @@
         <div class="students">
             <a href="<?php the_permalink();?>">
                 <h2 class="students-names"><?php echo get_the_title( $post_id ); ?></h2>
-                <div class="students-images__div">
+                <div>
                     <img class="students-images headshot" onmouseover="onHoverStudent(this, '<?php the_field('headshot_hover'); ?>')" onmouseleave="onLeaveStudent(this, '<?php the_field('headshot'); ?>')" src="<?php the_field('headshot'); ?>" />
                 </div>
             </a>

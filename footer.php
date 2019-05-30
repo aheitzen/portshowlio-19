@@ -20,7 +20,7 @@
 <!-- Ian building footer -->
 
 </div><!-- #content -->
-
+<?php if($wp_query->queried_object->post_name != 'temp-home'): ?>
 <div class="ianfooter">
   <div class="footerthankyou">
 	  <p>The SCCA class of 2019 owes a huge debt of gratitude to the incredible teachers, staff, alumni, speakers, and designers of past and present who have educated and inspired us on our journey through this program. Thank you for showing us the way. We look forward to joining this amazingly creative and collaborative design community.</p>
@@ -34,6 +34,7 @@
 	</div>
 
 </div>
+<?php endif; ?>
 
 </div><!-- #page -->
 

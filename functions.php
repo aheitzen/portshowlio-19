@@ -179,3 +179,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 add_filter( 'show_admin_bar' , '__return_false' );
 
+

@@ -25,6 +25,7 @@
 
 <body <?php body_class(); ?>>
     <div id="page" class="site">
+        <?php if($wp_query->queried_object->post_name != 'temp-home'): ?>
         <header>
             <div class="primary-navigation" id="sidebar-nav">
                 <a href=""><img id="logo" src="<?php header_image(); ?>" /></a>
@@ -37,13 +38,13 @@
                 <nav>
                     <?php $location=basename(get_permalink()); ?>
                     <div class="navItem <?php if($location == 'home'): echo 'active'; endif; ?>" id="navWork">
-                        <a href="<?php bloginfo("template_url")?>/home" id="navWorklink"><h2 class="primary-nav-items">Work</h2></a>
+                        <a href="<?php echo get_site_url(); ?>/home" id="navWorklink"><h2 class="primary-nav-items">Work</h2></a>
                     </div>
                     <div class="navItem <?php if($location == 'student-grid-page'): echo 'active'; endif; ?>" id="navStudents">
-                        <a href="<?php bloginfo("template_url")?>/student-grid-page" id="navStudentslink"><h2 class="primary-nav-items">Students</h2></a>
+                        <a href="<?php echo get_site_url(); ?>/student-grid-page" id="navStudentslink"><h2 class="primary-nav-items">Students</h2></a>
                     </div>
                     <div class="navItem <?php if($location == 'event-page'): echo 'active'; endif; ?>" id="navEvent">
-                        <a href="<?php bloginfo("template_url")?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
+                        <a href="<?php echo get_site_url(); ?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
                     </div>
                 </nav>
                 <div id="works-student" class="hideNav">
@@ -86,8 +87,8 @@
                 </div>
                 
             </div>
-
-
         </header>
 
-        <div id="content" class="site-content">
+        <?php endif; ?>
+
+        <div id="content" class="site-content <?php if($wp_query->queried_object->post_name == 'temp-home'): echo 'no-nav'; endif; ?>">
