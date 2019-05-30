@@ -199,17 +199,27 @@
 	.ianfooter{
 		padding: 10% 10%;
 		flex-direction: column;
+		// position: fixed;
+		bottom: 0;
+		width: 100%;
+		margin-left: 0;
+	
 	}
 	.footerthankyou{
 		padding: 0 0 10% 0;
 			p{
 			text-align: center;
+			font-size: 13px;
 			}
 	}
 }
 @media all and (max-width: 480px) {
 	.footersocial {
 		padding-top: 5%
+	}
+	.ianFooter {
+		width: 100%;
+		margin-left: 0;
 	}
 }
 

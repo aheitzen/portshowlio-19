@@ -91,7 +91,7 @@ input[type=search] {
 
 #searchInput::-webkit-input-placeholder {
     font-size: 10px;
-    color: grey;
+    color: #FBF9F4;
 
 
 }
@@ -241,6 +241,10 @@ nav {
         justify-content: space-around;
         width: 100%;
     }
+    p.students-focus.subhead {
+        font-size: 3.2em;
+    }
+
 
 
     //  STUDENTS
@@ -276,6 +280,11 @@ nav {
         flex-direction: column;
         justify-content: space-around;
         position: sticky;
+        margin-top: 10em;
+    }
+    #searchInput::-webkit-input-placeholder {
+    font-size: 7.5px;
+    color: #FBF9F4;
     }
 }
 
@@ -295,10 +304,12 @@ nav {
         grid-template-columns: 5em 1fr 1fr 5em;
         grid-column-gap: 5em;
         //        grid-template-rows: repeat(auto-fill, 1fr);
-        grid-auto-rows: minmax(min-content, 70vw);
+        // grid-auto-rows: minmax(min-content, 70vw);
+        grid-auto-rows: minmax(min-content, 48vw);
         grid-row-gap: 5em;
         justify-items: center;
         align-items: start;
+
     }
 
     .students:nth-of-type(odd) {
@@ -309,6 +320,14 @@ nav {
         grid-column-start: 3;
         align-self: end;
     }
+    #searchInput::-webkit-input-placeholder {
+    font-size: 7.5px;
+    color: #FBF9F4;
+    }
+    .search-filter {
+        margin-top: 10em;
+    }
+
 }
 
 @media all and (min-width: 992px) and (max-width: 1199px) {
@@ -324,30 +343,35 @@ nav {
 
     .students-grid {
         display: grid;
-        grid-template-columns: 5em 1fr 1fr 5em;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 5em;
-        //        grid-template-rows: repeat(auto-fill, 1fr);
-        grid-auto-rows: minmax(min-content, 70vw);
         grid-row-gap: 5em;
         justify-items: center;
         align-items: start;
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 10em;
+        //        grid-template-rows: repeat(auto-fill, 1fr);
+        // grid-auto-rows: minmax(min-content, 70vw);
     }
 
     .students-test:nth-of-type(odd) {
         grid-column-start: 2;
+
     }
 
     .students-test:nth-of-type(even) {
         grid-column-start: 3;
         align-self: end;
     }
+    #searchInput::-webkit-input-placeholder {
+        font-size: 9px;
+        color: #FBF9F4;
+    }
 }
 
 @media all and (min-width: 1200px) {
-
-
     //  STUDENTS
-
     .students-images {
         max-width: 90%;
         height: auto;
@@ -358,7 +382,6 @@ nav {
         display: grid;
         grid-template-columns: 5em 1fr 1fr 1fr 5em;
         grid-column-gap: 5em;
-        // LOOK HERE: EVEN OR ODD SECOND OPINION
         grid-auto-rows: minmax(min-content, 33vw);
         grid-row-gap: 5em;
         justify-items: center;
