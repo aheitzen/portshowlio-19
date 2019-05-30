@@ -629,6 +629,9 @@ div#navStudents:hover {
     #content.no-nav {
         margin-top: 0;
     }
+    .works-grid-container .works-grid-inner-container {
+    flex: 0 100%;
+}
 }
 /*IPAD MEDIA QUERY*/
 @media only screen
