@@ -41,7 +41,9 @@
 				<div class="works-grid">
 					<div class="works-container" onmouseover="onWorkHover('<?php the_title(); ?>', '<?php the_field('headshot_hover'); ?>')" onmouseleave="onWorkLeave()">
 						<a href="<?php the_permalink(); ?>">
-							<img class="works-images" src="<?php the_field('featured_image'); ?>" />
+                            <div class="works-images-container">
+    							<img class="works-images" src="<?php the_field('featured_image'); ?>" />
+                            </div>
 							<h2 class="project-title"><?php the_field('project_title'); ?></h2>
 							<p class="project-type"><?php the_field('project_type'); ?></p>
 							<div class="black-bar"></div>

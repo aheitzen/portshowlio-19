@@ -26,7 +26,7 @@ body {
 
 .black-bar {
     background-color: black;
-    margin-top: 5px;
+    margin: 5px auto 0;
     height: 2px;
     width: 14em;
 }
@@ -54,20 +54,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5em;
+    align-items: center;
 
     .works-grid-inner-container {
         flex: 0 50%;
+        margin-bottom: 5em;
+
         .works-grid {
-            display: grid;
             height: 100%;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(9, 1fr);
-            grid-gap: 3em;
-            margin-bottom: 3em;
+            margin: 0 5em 5em;
 
             .works-container {
+                text-align: center;
+
+                .works-images-container {
+                    text-align: center;
+                }
                 img {
-                    // max-height: 500px;
+                    max-height: 450px;
                     max-width: 100%;
                 }
             }
