@@ -31,6 +31,11 @@ body {
     width: 14em;
 }
 
+#jumbotron {
+    height: 100%;
+    width: 100%;
+}
+
 // .works-images {
 //     max-width: 100%;
 //     height: 30em;
@@ -347,18 +352,27 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     margin: 0 66px 0;
+    position: relative;
 
     .video {
         flex: 0 100%;
         margin: 66px 0 0;
-        > * {
-            margin: 0;
-        }
-        iframe {
-            height: 100% !important;
-            width: 100% !important;
-        }
+        padding-bottom: 56.25%;
+        height: 100%; 
+        overflow: hidden;
+        position: relative;
     }
+
+    .video iframe,
+    .video object,
+    .video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 .projects {
@@ -496,14 +510,16 @@ a.collaborators.siteLink {
 // }
 
 h4.subhead {
-    margin-top: 1em;
+    
     // margin-bottom: 1em;
         margin-bottom: 2em;
+            margin-top: 10px;
 }
 
 .date-ui {
     margin-top: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 0px;
+
 }
 
 div#navStudents:hover {
@@ -630,23 +646,26 @@ div#navStudents:hover {
         margin-top: 0;
     }
     .works-grid-container .works-grid-inner-container {
-    flex: 0 100%;
-}
+        flex: 0 100%;
+    }
 }
 /*IPAD MEDIA QUERY*/
 @media only screen
 and (min-width : 768px) 
 and (max-width : 1024px) {
-   #content.no-nav {
+    #content.no-nav {
         margin-top: 0;
-    } 
+    }
 }
 
 @media only screen 
 and (min-width : 481px) 
 and (max-width : 767px) {
-   #content.no-nav {
+    #content.no-nav {
         margin-top: 0;
+    }
+    #sidebar-nav .showNav {
+        display: none;
     }
     
 }

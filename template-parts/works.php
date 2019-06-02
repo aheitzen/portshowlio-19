@@ -126,7 +126,7 @@
     });
 
     // when search data has been entered run this
-    $('#searchInput').change(function () {
+    $('#searchInput').on('search', function () {
         // reset the current works to none
         currentWorks = []
         // get the search val and make it lowercase

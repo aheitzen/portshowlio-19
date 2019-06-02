@@ -21,18 +21,18 @@ get_header();
 				<div class="page-content-404">
 					<p>We can’t seem to find the page you’re looking for.</p>
 					<div class="buttonWrapper">
-						<a href="index.php">Take Me Home</a>
+						<a href="<?php echo get_site_url(); ?>/home">Take Me Home</a>
 					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<script src='/portshowlio19-master/wp-content/themes/portshowlio19-master/js/blotter.min.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/liquidDistortMaterial.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/liquidinteract.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/three.min.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/underscore-min.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/GLManager.js'></script>
-	<script src='/portshowlio_site/wp-content/themes/portshowlio-19/js/shaders.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/blotter.min.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/liquidDistortMaterial.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/liquidinteract.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/three.min.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/underscore-min.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/GLManager.js'></script>
+	<script src='<?php echo get_site_url(); ?>/wp-content/themes/portshowlio19-master/js/shaders.js'></script>
 <?php

@@ -25,10 +25,10 @@
 
 <body <?php body_class(); ?>>
     <div id="page" class="site">
-        <?php if($wp_query->queried_object->post_name != 'temp-home'): ?>
+        <?php if($wp_query->queried_object->post_name != 'temp-home' && $wp->request != '404.php'): ?>
         <header>
             <div class="primary-navigation" id="sidebar-nav">
-                <a href=""><img id="logo" src="<?php header_image(); ?>" /></a>
+                <a href="<?php echo get_site_url(); ?>/home"><img id="logo" src="<?php header_image(); ?>" /></a>
                 <!-- <hr> -->
                 <div id="show-details">
                     <h3 class="date-ui">June 12th & 13th</h3>
