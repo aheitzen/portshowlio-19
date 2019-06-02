@@ -91,4 +91,4 @@
 
         <?php endif; ?>
 
-        <div id="content" class="site-content <?php if($wp_query->queried_object->post_name == 'temp-home'): echo 'no-nav'; endif; ?>">
+        <div id="content" class="site-content <?php if($wp_query->queried_object->post_name == 'temp-home' || $wp->request == '404.php'): echo 'no-nav'; endif; ?>">

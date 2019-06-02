@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+a:visited {
+    color: #FBF9F4 !important;
+}
+
 #page {
     height: 100%;
 }
@@ -564,6 +568,21 @@ div#navStudents:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
+}
+
+.oops-button {
+    background-color: black;
+    color: #FBF9F4;
+    border-radius: 0;
+    border: none;
+    height: 2.5em;
+    width: 8.5em;
+    font-family: 'SuisseIntl-Book';
+    padding-top: 6px;
+}
+
+.button-link-oops {
+    font-size: 12px;
 }
     
 

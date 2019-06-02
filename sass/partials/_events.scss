@@ -3,10 +3,10 @@
 	height: 60vh;
 	width: 80vw;
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 7%;
 	display: flex;
-  justify-content: center;
-  align-items: center;
+  	justify-content: center;
+  	align-items: center;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -39,6 +39,7 @@
 		line-height: 28px;
 		width: 45%;
     margin-right: 10%;
+        font-size: 15px;
 	}
 }
 .buttonWrapper{
@@ -212,7 +213,9 @@
 			font-size: 13px;
 			}
 	}
+	
 }
+
 @media all and (max-width: 480px) {
 	.footersocial {
 		padding-top: 5%
@@ -221,7 +224,72 @@
 		width: 100%;
 		margin-left: 0;
 	}
+
+
 }
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px) {
+  	.oops-button {
+		height: 5.5em !important;
+    	width: 15.5em !important;
+	}
+	.page-content-404 p {
+    	font-size: 1.5em;
+    	line-height: 28px;
+    	width: 80%;
+   		margin: auto;
+    	display: inline;
+    	font-size: 3em;
+    	padding-bottom: 10px;
+    }
+  }
+
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 767px) {
+	.oops-button {
+		height: 5.5em !important;
+    	width: 15.5em !important;
+	}
+	.page-content-404 {
+		margin-top: 10em;
+	}
+	.page-content-404 p {
+    	font-size: 1.5em;
+    	line-height: 28px;
+    	width: 80%;
+   		margin: auto;
+    	display: inline;
+    	font-size: 3em;
+    	padding-bottom: 10px;
+    }
+}
+
+@media only screen
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	.oops-button {
+		height: 3.5em !important;
+    	width: 11.5em !important;
+	}
+}
+
+@media only screen 
+and (min-width : 1024px) 
+and (max-width : 1366px) {
+	.page-content-404 p {
+		    margin-top: 13em;
+	}
+	.oops-button {
+		margin-top: 13em;
+	}
+	canvas.b-canvas {
+		margin-top: 13em;
+	}
+}
+
+
 
 // EVENT PAGE SCSS STARTS HERE
 .event-dates{
@@ -333,25 +401,54 @@
 			text-align: center;
 		}
 		.event-floorplan{
-			h3{
+			h3 {
 				font-size: 4vw;
 				text-align: center;
+				margin-top: -10em;
 			}
+		}
+		.container.event-floorplan {
+			margin-top: 8em;
 		}
 		.rowEvent .cellEventIntro {
 				text-align: center;
 				padding-bottom: 15%;
 				h3{
 					margin: 0;
-					font-size: 3vw;
+					// font-size: 3vw;
+					font-size: 3em;
+    				margin-bottom: 10px;
 				}
 				h1{
 					margin: 0;
-					font-size: 5vw;
+					// font-size: 5vw;
+					font-size: 9vw;
 				}
 		}
-		.map{
+		.event-dates h3 {
+			font-size: 4em;
+		}
+		p.even-page-time {
+			font-size: 3em;
+		}
+		.map {
 			padding-bottom: 15%;
+		}
+		.event-button {
+		    background-color: black;
+		    color: #FBF9F4;
+		    border-radius: 0;
+		    border: none;
+		    height: 4.5em;
+		    width: 16.5em;
+		    font-family: 'SuisseIntl-Book';
+		    padding-top: 6px;
+		}
+		a.event-button-link {
+    		font-size: 1.5em;
+		}
+		.space-top {
+			font-size: 3em;
 		}
 	}
 @media all and (max-width: 480px) {
@@ -371,6 +468,7 @@
 		h3{
 			font-size: 4vw;
 			text-align: center;
+			margin-top: -10em;
 		}
 	}
 }

@@ -21,7 +21,9 @@ get_header();
 				<div class="page-content-404">
 					<p>We can’t seem to find the page you’re looking for.</p>
 					<div class="buttonWrapper">
-						<a href="<?php echo get_site_url(); ?>/home">Take Me Home</a>
+						<button class="oops-button">
+						<a class="button-link-oops" href="<?php echo get_site_url(); ?>/home">Take Me Home</a>
+						</button>
 					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

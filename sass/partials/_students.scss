@@ -162,19 +162,11 @@ nav {
         text-decoration: underline;
     }
     .primary-nav-items {
-        margin: 0 0 20px;
+        margin: 0 0 0px;
     }
 
 }
 
-//#navEventlink:hover::before {
-//    content: "";
-//    display: block;
-//    height: 2em;
-//    width: 4em;
-//    align-self: center;
-//    background: $color__black;
-//}
 #sidebar-nav {
     .hideNav {
         display: none;
@@ -240,6 +232,7 @@ nav {
         flex-direction: row-reverse;
         justify-content: space-around;
         width: 100%;
+        align-items: center;
     }
     p.students-focus.subhead {
         font-size: 3.2em;
