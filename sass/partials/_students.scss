@@ -7,7 +7,9 @@
     margin-top: 5px;
 }
 
-.students-names {}
+.students-names {
+    margin-bottom: 10px;
+}
 
 .students-images {
     max-width: 100%;
@@ -148,7 +150,7 @@ hr {
     padding: 2em;
     text-align: center;
     z-index: 999;
-    border-right: black 2px solid;
+    border-right: black 3px solid;
 }
 
 nav {
@@ -162,19 +164,9 @@ nav {
         text-decoration: underline;
     }
     .primary-nav-items {
-        margin: 0 0 0px;
+        margin: 0 0 20px;
     }
 
-}
-
-#sidebar-nav {
-    .hideNav {
-        display: none;
-    }
-
-    .showNav {
-        display: block;
-    }
 }
 
 // .navItem:hover,
@@ -186,6 +178,23 @@ nav {
 
 
 //  MEDIA QUERIES
+
+
+@media only screen 
+and (min-width : 481px) 
+and (max-width : 767px) {
+   .navItem .primary-nav-items {
+    margin-bottom: 0;
+   } 
+}
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px) {
+    .navItem .primary-nav-items {
+    margin-bottom: 0;
+   }
+  }
 
 @media all and (max-width: 639px) {
 

@@ -27,7 +27,7 @@
 	</div>
   <div class="footersocial">
 		<div class="footerrow">
-			<div class="socialoutline scca social_center"><a href="http://www.seattlecentralcreativeacademy.com" target="_blank">scca</a></div>
+			<div class="socialoutline scca social_center"><a id="scca-visited" href="http://www.seattlecentralcreativeacademy.com" target="_blank">scca</a></div>
 		  <div class="socialoutline instagram social_center"><a href="https://www.instagram.com/creative_academy/" target="_blank"><i class="fab fa-instagram"></i></a></div>
       <div class="socialoutline facebook social_center"><a href="https://www.facebook.com/seattlecentralcreativeacademy/" target="_blank"><i class="fab fa-facebook"></i></a></div>
 		</div>

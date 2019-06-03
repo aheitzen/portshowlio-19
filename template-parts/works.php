@@ -1,14 +1,16 @@
 <script>
 	function onWorkHover(name, headshot) {
 		var sidebar = $('#sidebar-nav #works-student');
-		sidebar.removeClass('hideNav');
-		sidebar.addClass('showNav');
-
 		var headshotElement = sidebar.find('#headshot');
 		var nameElement = sidebar.find('#name');
 
 		headshotElement.attr('src', headshot);
 		nameElement.text(name);
+
+        headshotElement.on('load', function () {
+            sidebar.removeClass('hideNav');
+            sidebar.addClass('showNav');
+        })
 	}
 
 	function onWorkLeave() {
@@ -16,11 +18,13 @@
 		sidebar.removeClass('showNav');
 		sidebar.addClass('hideNav');
 
-		var headshot = sidebar.find('#headshot');
-		var name = sidebar.find('#name');
+        var interval = setIntervalTimer(function () {
+    		var headshot = sidebar.find('#headshot');
+    		var name = sidebar.find('#name');
 
-		headshot.attr('src', '');
-		name.text = '';
+    		headshot.attr('src', '');
+    		name.text = '';
+        }, 300);
 	}
 </script>
 

@@ -69,13 +69,14 @@
 	<?php if( have_rows('projects') ): ?>
 		<?php $row=0; ?>
 		<?php while ( have_rows('projects') ) : the_row(); $row++; ?>
-			<div class="black-divider-line"></div>
+			<!-- <div class="black-divider-line"></div> -->
 			<?php if( get_row_layout() == 'project' ): ?>
 				<div class="featured-project" id="project-<?php echo $row; ?>">
 					<div class="featured-project-type">
 						<h3 class="project-title-student-single"><?php the_sub_field('project_title'); ?></h3>
 						<p class="paragraph-project-type"><?php the_sub_field('project_type'); ?></p>
-						<div class="black-bar-collab"></div>
+						<!-- <div class="black-bar-collab"></div> -->
+						<img id="project-breaks"src="http://localhost:8888/wp-content/uploads/2019/06/Screen-Shot-2019-06-02-at-4.40.05-PM.png">
 						<div class="projectDescription"><?php the_sub_field('project_description'); ?></div>
 						<?php if( get_sub_field('collaborators') ): ?>
 							<p class="collaboratortitle">Collaborators:</p>
@@ -198,23 +199,32 @@
 			projectLinkContainer.append(newLink);
 			sideNavLinkContainer.append(newLink);
 		});
+
+
+		var videos = $('.grid-video .video')
+		videos.each(function (index) {
+			var iframe = $(this).find('iframe')[0]
+			if (iframe && iframe.src.includes('youtube.com')) {
+				$(iframe).parent().css('padding-bottom', '56.25%')
+			}
+		})
 	})
 </script>
 
-<div class="bottom-student-navigation">
-	<h3 class="student-post-links">
-		<?php if (previous_post_link('%link')): ?>
-			<?php previous_post_link('%link'); ?>
-		<?php endif; ?>
-	</h3>
-	<h3 class="student-post-links">
-		<?php if (next_post_link('%link')): ?>
-			<?php next_post_link('%link'); ?>
-		<?php endif; ?>
-	</h3> 
+	<div class="bottom-student-navigation">
+		<h3 class="student-post-links">
+			<?php if (previous_post_link('%link')): ?>
+				<?php previous_post_link('%link'); ?>
+			<?php endif; ?>
+		</h3>
+		<h3 class="student-post-links">
+			<?php if (next_post_link('%link')): ?>
+				<?php next_post_link('%link'); ?>
+			<?php endif; ?>
+		</h3> 
 
-		
-</div>
+			
+	</div>
 
 
 </div>

@@ -36,7 +36,11 @@
                 </div>
                 <!-- <hr> -->
                 <nav>
-                    <?php $location=basename(get_permalink()); ?>
+                    <?php 
+                        $location=basename(get_permalink()); 
+                        $parent = basename(pathinfo(get_permalink())['dirname']);
+                        if ($parent != 'student'):
+                    ?>
                     <div class="navItem <?php if($location == 'home'): echo 'active'; endif; ?>" id="navWork">
                         <a href="<?php echo get_site_url(); ?>/home" id="navWorklink"><h2 class="primary-nav-items">Work</h2></a>
                     </div>
@@ -46,6 +50,7 @@
                     <div class="navItem <?php if($location == 'event-page'): echo 'active'; endif; ?>" id="navEvent">
                         <a href="<?php echo get_site_url(); ?>/event-page" id="navEventlink"><h2 class="primary-nav-items">Event</h2></a>
                     </div>
+                    <?php endif; ?>
                 </nav>
                 <div id="works-student" class="hideNav">
                     <img id="headshot" src="" />
@@ -55,6 +60,20 @@
                     <img class="single-post-headshot-sidenav" src="<?php the_field('headshot_hover'); ?>" />
                    <!--  <br> -->
                     <p class="portfolio-site-link-style-sidenav"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
+                    <div class="three-categories-focus">
+                        <?php 
+                            $focus = get_field('focus');
+                            if( $focus ): 
+                                $numItems = count($focus);
+                                $i = 0;
+                                foreach( $focus as $focus ): 
+                        ?>
+                                <p class='focus'>
+                                    <?php echo $focus; ?>
+                                </p>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
                     <div class='socialSection-side-nav'>
                         <?php if( get_field('facebook_page') ): ?>
                             <a class='socialIcon' href='<?php the_field('facebook_page')?>' target='_blank'><i class="fab fa-facebook-f"></i></a>

@@ -8,9 +8,9 @@ body {
     padding: 0;
 }
 
-a:visited {
-    color: #FBF9F4 !important;
-}
+// a:visited {
+//     color: #FBF9F4 !important;
+// }
 
 #page {
     height: 100%;
@@ -38,6 +38,38 @@ a:visited {
 #jumbotron {
     height: 100%;
     width: 100%;
+}
+
+#sidebar-nav {
+    #works-student {
+        transition: opacity 0.3s ease-out;
+        &.hideNav {
+            display: block;
+            opacity: 0;
+        }
+        &.showNav {
+            display: block;
+            opacity: 1;
+        }
+    }
+    #student {
+        transition: opacity 0.3s ease-out;
+        &.hideNav {
+            display: block;
+            opacity: 0;
+        }
+        &.showNav {
+            display: block;
+            opacity: 1;
+        }
+        .three-categories-focus {
+            text-align: left;
+            margin-bottom: 15px;
+            p {
+                margin: 5px 0;
+            }
+        }
+    }
 }
 
 // .works-images {
@@ -361,7 +393,7 @@ a:visited {
     .video {
         flex: 0 100%;
         margin: 66px 0 0;
-        padding-bottom: 56.25%;
+        padding-bottom: 0;
         height: 100%; 
         overflow: hidden;
         position: relative;
@@ -424,7 +456,7 @@ a:visited {
 
 .paragraph-project-type {
     margin-top: 10px;
-    font-size: 3.5em;
+    font-size: 2.5em;
     margin-bottom: 18px;
 }
 
@@ -494,7 +526,7 @@ a.collaborators.siteLink {
 
 .projectDescription {
     font-size: 1em;
-    margin-top: 18px;
+    margin-top: 27px;
     width: 50%;
 }
 
@@ -503,6 +535,10 @@ a.collaborators.siteLink {
     margin-top: 5px;
     height: 2px;
     width: 30em;
+}
+
+#project-breaks {
+    width: 47%;
 }
 
 // .projectDescription {
@@ -536,7 +572,10 @@ div#navStudents:hover {
 //     font-size: 2em;
 //     line-height: 1.21em; 
 // }
-    
+
+#scca-visited:visited {
+    color: #FBF9F4;
+} 
 
 // SPLASH PAGE CODE
 .temp-h1 {
@@ -584,6 +623,8 @@ div#navStudents:hover {
 .button-link-oops {
     font-size: 12px;
 }
+
+
     
 
 /*MEDIA QUERIES MOBILE*/
@@ -659,7 +700,7 @@ div#navStudents:hover {
         margin: 10px;
     }
     #sidebar-nav .showNav {
-        display: none;
+        opacity: 0;
     }
     #content.no-nav {
         margin-top: 0;
@@ -684,7 +725,7 @@ and (max-width : 767px) {
         margin-top: 0;
     }
     #sidebar-nav .showNav {
-        display: none;
+        opacity: 0;
     }
     
 }
