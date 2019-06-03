@@ -1,8 +1,5 @@
 <?php get_header(); ?>
-
-
 	<div class="student-post-page-grid">
-	
 		<!-- HEADSHOT -->
 		<img class="single-post-headshot" src="<?php the_field('headshot_hover'); ?>" />
 		<div class="secondary">
@@ -10,7 +7,7 @@
 			<h2 class="single-post-h2"><?php the_title(); ?></h2>
 			<!-- THREE CATEGORIES OF FOCUS -->
 			<div class="three-categories-focus">
-			<?php $focus = get_field('focus');
+				<?php $focus = get_field('focus');
 					if( $focus ): 
 						$numItems = count($focus);
 						$i = 0;
@@ -29,7 +26,6 @@
 			</div>
 			<!-- WEBSITE LINK -->
 			<p class="portfolio-site-link-style"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
-
 			<!-- SOCIAL MEDIA -->
 			<div class='socialSection'>
 				<?php if( get_field('facebook_page') ): ?>
@@ -59,18 +55,15 @@
 			</div>
 		</div>
 		<div id='project-links'>
-			<!-- <h3 class="projects-h3-style">Projects</h3> -->
-			<ul class="small-nav-student-post-page">
-				
-			</ul>
+			<ul class="small-nav-student-post-page"></ul>
 		</div>
 	</div>
-<div class="projects">
-	<?php if( have_rows('projects') ): ?>
-		<?php $row=0; ?>
-		<?php while ( have_rows('projects') ) : the_row(); $row++; ?>
+	<div class="projects">
+		<?php if( have_rows('projects') ): ?>
+			<?php $row=0; ?>
+			<?php while ( have_rows('projects') ) : the_row(); $row++; ?>
 			<!-- <div class="black-divider-line"></div> -->
-			<?php if( get_row_layout() == 'project' ): ?>
+				<?php if( get_row_layout() == 'project' ): ?>
 				<div class="featured-project" id="project-<?php echo $row; ?>">
 					<div class="featured-project-type">
 						<h3 class="project-title-student-single"><?php the_sub_field('project_title'); ?></h3>
@@ -160,7 +153,6 @@
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</div>
-
 					<!-- END OF LAYOUTS -->
 				</div>
 			<?php endif; ?>
@@ -172,14 +164,12 @@
 	$(document).scroll(function() {
 	  var y = $(this).scrollTop();
 	  if (y > 300) {
-		  $('#sidebar-nav #student').removeClass('hideNav');
-		  $('#sidebar-nav #student').addClass('showNav');
-		 
-	  } else {
-		  $('#sidebar-nav #student').removeClass('showNav');
-		$('#sidebar-nav #student').addClass('hideNav');
-		  
-	  }
+		  	$('#sidebar-nav #student').removeClass('hideNav');
+			$('#sidebar-nav #student').addClass('showNav');
+		} else {
+			$('#sidebar-nav #student').removeClass('showNav');
+			$('#sidebar-nav #student').addClass('hideNav');
+		}
 	});
 
 	function projectLinkClicked(project) {
@@ -199,8 +189,7 @@
 			projectLinkContainer.append(newLink);
 			sideNavLinkContainer.append(newLink);
 		});
-
-
+		
 		var videos = $('.grid-video .video')
 		videos.each(function (index) {
 			var iframe = $(this).find('iframe')[0]
@@ -210,7 +199,6 @@
 		})
 	})
 </script>
-
 	<div class="bottom-student-navigation">
 		<h3 class="student-post-links">
 			<?php if (previous_post_link('%link')): ?>
@@ -222,11 +210,7 @@
 				<?php next_post_link('%link'); ?>
 			<?php endif; ?>
 		</h3> 
-
-			
 	</div>
-
-
 </div>
 
 

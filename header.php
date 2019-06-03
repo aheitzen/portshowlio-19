@@ -31,8 +31,11 @@
                 <a href="<?php echo get_site_url(); ?>/home"><img id="logo" src="<?php header_image(); ?>" /></a>
                 <!-- <hr> -->
                 <div id="show-details">
+                    <!-- <img id="nav-breaks"src="http://localhost:8888/wp-content/uploads/2019/06/Screen-Shot-2019-06-02-at-4.40.05-PM.png"> -->
                     <h3 class="date-ui">June 12th & 13th</h3>
                     <h4 class="subhead">5:00pm - 9:00pm</h4>
+                    <!-- <img id="nav-breaks"src="http://localhost:8888/wp-content/uploads/2019/06/Screen-Shot-2019-06-02-at-4.40.05-PM.png"> -->
+
                 </div>
                 <!-- <hr> -->
                 <nav>
@@ -59,7 +62,6 @@
                 <div id="student" class="hideNav">
                     <img class="single-post-headshot-sidenav" src="<?php the_field('headshot_hover'); ?>" />
                    <!--  <br> -->
-                    <p class="portfolio-site-link-style-sidenav"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
                     <div class="three-categories-focus">
                         <?php 
                             $focus = get_field('focus');
@@ -74,6 +76,7 @@
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
+                    <p class="portfolio-site-link-style-sidenav"><a class='siteLink' href="http://<?php the_field('portfolio_site'); ?>" target='_blank'><?php the_field('portfolio_site'); ?></a></p>
                     <div class='socialSection-side-nav'>
                         <?php if( get_field('facebook_page') ): ?>
                             <a class='socialIcon' href='<?php the_field('facebook_page')?>' target='_blank'><i class="fab fa-facebook-f"></i></a>

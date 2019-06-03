@@ -8,10 +8,6 @@ body {
     padding: 0;
 }
 
-// a:visited {
-//     color: #FBF9F4 !important;
-// }
-
 #page {
     height: 100%;
 }
@@ -25,7 +21,7 @@ body {
     color: #191919;
     margin-bottom: 0;
     margin-top: 0;
-
+    font-family: 'SuisseWorks-RegularItalic';
 }
 
 .black-bar {
@@ -72,20 +68,6 @@ body {
     }
 }
 
-// .works-images {
-//     max-width: 100%;
-//     height: 30em;
-//     margin-top: 5em;
-// }
-
-// .works-grid {
-//     display: grid;
-//     grid-template-columns: 5em 1fr 1fr;
-//     grid-template-rows: repeat(auto-fill, 50em);
-//     justify-items: center;
-//     align-items: center;
-// }
-
 #works-student {
     #name {
         text-align: center;
@@ -95,7 +77,6 @@ body {
     }
 }
 
-
 .works-grid-container {
     width: 100%;
     height: auto;
@@ -103,18 +84,14 @@ body {
     flex-wrap: wrap;
     margin-top: 5em;
     align-items: center;
-
     .works-grid-inner-container {
         flex: 0 50%;
         margin-bottom: 5em;
-
         .works-grid {
             height: 100%;
             margin: 0 5em 5em;
-
             .works-container {
                 text-align: center;
-
                 .works-images-container {
                     text-align: center;
                 }
@@ -131,7 +108,6 @@ body {
             }
         }
         img {
-            // max-height: 800px;
             max-width: 100%;
         }
         &:nth-of-type(even) {
@@ -146,46 +122,13 @@ body {
     }
 }
 
-
-
-// .works-container:nth-of-type(odd) {
-//     grid-column-start: 2;
-// }
-
-// .works-container:nth-of-type(even) {
-//     grid-column-start: 3;
-//     margin-top: 25em;
-// }
-
 .secondary {
     grid-column: 4/span 4;
     margin-left: 2em;
 }
 
 #project-links {
-    // grid-column: span 1;
     grid-column: 9 / span 4;
-}
-
-// .imageGrid {
-//     margin: 0 auto;
-//     margin-bottom: 10em;
-
-// }
-
-// CONSTRUCTION PAGE
-
-.construction-image {
-    margin: 0;
-    margin-top: 0;
-    height: 45em;
-    max-width: 100%;
-}
-
-.construction-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 // STUDENT PAGE
@@ -217,7 +160,6 @@ a {
 
 a:visited {
     color: inherit;
-
 }
 
 .single-post-h2 {
@@ -228,14 +170,11 @@ a:visited {
 }
 
 .single-post-headshot {
-
-	height: 32em;
+    height: 32em;
     margin-left: 2em;
     margin-top: 1.7em;
     margin-bottom: 3.7em;
     grid-column: 1 / span 3;
-    // height: 15em; sean
-
 }
 
 .single-post-headshot-sidenav {
@@ -244,7 +183,7 @@ a:visited {
 
 .portfolio-site-link-style-sidenav {
     text-align: left;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     margin-top: 10px;
     color: #191919;
 }
@@ -254,43 +193,29 @@ a:visited {
     text-align: left;
 }
 
-    
-
 .portfolio-site-link-style {
     color: #191919;
-    // font-size: 3em;
-    font-size: 2.8em;
+    font-size: 2.5em;
     margin-bottom: 1em;
-    // margin-top: 3em;
-    // margin-top: 3.5em;
-    // margin-top: 2.5em;
-        margin-top: 20px;
+    margin-top: 20px;
 }
 
 .student-post-page-grid {
     display: grid;
     grid-template-rows: 1fr;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(12, 1fr);
     margin-left: 2em;
     margin-top: 2em;
 }
 
-
-
 .focus {
-	    margin-bottom: 0;
-	    font-size: 2em;
-	    color: $color__black;
-
+    margin-bottom: 0;
+	font-size: 2em;
+	color: $color__black;
 }
-
 
 .three-categories-focus {
     grid-column-start: 2;
-    // display: flex;
-    // flex-direction: row;
-    // margin-left: -1em;
 }
 
 .siteLink {
@@ -304,33 +229,26 @@ a:visited {
     margin: 0 auto;
 }
 
-
 .fab {
 	font-size: 2.5em;
 	color: $color__black;
     font-size: 2.5em;
-        // font-size: 6px;
     color: #191919;
     margin-right: 20px;
 }
 
-// NAVIGATION
 .site-header {
 	height: 100%;
 	width: 100%;
 }
 
-
-
-
-// GRID GRID GRID VERTICLE GRID
+// VERTICLE GRID
 
 .grid-verticle-two {
 	display: flex;
     flex-wrap: wrap;
     margin: 0 66px 0;
-
-	.imageGrid {
+    .imageGrid {
         flex: 0 calc(50% - 33px);
         margin: 66px 0 0;
         &:nth-of-type(odd) {
@@ -346,8 +264,7 @@ a:visited {
 	display: flex;
     flex-wrap: wrap;
     margin: 0 66px 0;
-
-	.imageGrid {
+    .imageGrid {
 		flex: 0 calc(50% - 33px);
         margin: 66px 0 0;
         &:nth-of-type(odd) {
@@ -363,7 +280,6 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     margin: 0 66px 0;
-
     .imageGrid {
         flex: 0 100%;
         margin: 66px 0 0;
@@ -377,7 +293,6 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     margin: 0 66px 0;
-
     .landscape {
         flex: 0 100%;
         margin: 66px 0 0;
@@ -389,7 +304,6 @@ a:visited {
     flex-wrap: wrap;
     margin: 0 66px 0;
     position: relative;
-
     .video {
         flex: 0 100%;
         margin: 66px 0 0;
@@ -398,7 +312,6 @@ a:visited {
         overflow: hidden;
         position: relative;
     }
-
     .video iframe,
     .video object,
     .video embed {
@@ -408,7 +321,6 @@ a:visited {
         width: 100%;
         height: 100%;
     }
-
 }
 
 .projects {
@@ -431,21 +343,13 @@ a:visited {
         }
     }
     .featured-project-image {
-        
         max-height: 600px;
         max-width: 100%;
-        
-
     }
-}
-
-.featured-project-image-top {
- 
 }
 
 .featured-project-type {
     color: #191919;
-
 }
 
 .project-title-student-single {
@@ -462,19 +366,18 @@ a:visited {
 
 .primary-nav-items:hover {
     text-decoration: underline;
-    // border-bottom: 4px;
-    // text-underline-position: under;
 }
 
 .small-nav-student-post-page {
-        list-style-type: none;
+    list-style-type: none;
     font-family: 'SuisseIntl-Book';
     color: #191919;
     font-size: 20px;
     text-align: right;
     margin-right: 2em;
     margin-left: 0;
-        margin-top: 30px;
+    margin-top: 30px;
+    
 }
 
 .ultra-small-side-nav {
@@ -506,15 +409,10 @@ a:visited {
 }
 
 a.collaborators.siteLink {
-    // display: inherit;
     font-family: 'SuisseIntl-Book';
-    font-size: 2.4em;
     line-height: 1.21em;
-    // text-decoration: underline;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 12px;
-    // font-family: SuisseIntl-Light;
-
 }
 
 .collaboratortitle {
@@ -541,37 +439,20 @@ a.collaborators.siteLink {
     width: 47%;
 }
 
-// .projectDescription {
-//     font-size: 2em;
-// }
-
-// a.collaborators.siteLink:hover {
-
-// }
-
 h4.subhead {
-    
-    // margin-bottom: 1em;
-        margin-bottom: 2em;
-            margin-top: 10px;
+    font-family: 'SuisseWorks-RegularItalic';
+    margin-bottom: 2em;
+    margin-top: 10px;
 }
 
 .date-ui {
-    margin-top: 14px;
+    margin-top: 1em;
     margin-bottom: 0px;
-
 }
 
 div#navStudents:hover {
     border-left: none;
 }
-
-// FOOTER
-// .footer-copy {
-//     font-family: 'SuisseIntl-Book';
-//     font-size: 2em;
-//     line-height: 1.21em; 
-// }
 
 #scca-visited:visited {
     color: #FBF9F4;
@@ -595,19 +476,27 @@ div#navStudents:hover {
 
 #temp-home-logo {
     width: 50%;
-    
 }
 
 #content.no-nav {
-   width: 100%;
+    width: 100%;
     margin-left: 0;
     text-align: center;
-    /* height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
 }
+
+#student {
+    margin-top: -2em;
+}
+
+#sidebar-nav #student .three-categories-focus p {
+    margin-top: 1em;
+}
+
+// EVENT CODE UPDATED
 
 .oops-button {
     background-color: black;
@@ -623,9 +512,6 @@ div#navStudents:hover {
 .button-link-oops {
     font-size: 12px;
 }
-
-
-    
 
 /*MEDIA QUERIES MOBILE*/
 @media only screen 
@@ -709,6 +595,7 @@ div#navStudents:hover {
         flex: 0 100%;
     }
 }
+
 /*IPAD MEDIA QUERY*/
 @media only screen
 and (min-width : 768px) 
@@ -727,8 +614,8 @@ and (max-width : 767px) {
     #sidebar-nav .showNav {
         opacity: 0;
     }
-    
 }
+
 /*IPAD PRO AND LARGER TABLETS*/
 @media only screen 
 and (min-width : 1024px) 

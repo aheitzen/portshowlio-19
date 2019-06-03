@@ -1,8 +1,6 @@
 html {
     text-rendering: optimizeLegibility;
     font-size: 10px;
-    //	clear: both;
-
     @media screen and (min-width: 768px) {
         font-size: 14px;
     }
@@ -44,17 +42,17 @@ h3 {
 .date,
 .time,
 .subhead {
-    // font-family: 'SuisseWorks-RegularItalic';
-    font-size: 2.2em;
+    font-family: 'SuisseWorks-RegularItalic';
+    font-size: 2em;
     line-height: 1.15em;
     color: #191919;
 }
 
 p {
     font-family: 'SuisseIntl-Book';
-    // font-size: 2.4em;
-    font-size: 2em;
-    line-height: 1.21em;
+    // font-size: 2em;
+    font-size: 16px;
+    // line-height: 1.21em;
 }
 
 .text-small {
