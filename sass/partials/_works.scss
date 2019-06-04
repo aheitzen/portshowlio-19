@@ -166,7 +166,8 @@ a:visited {
 	color: $color__black;
 	font-size: 4.5em;
     margin-bottom: 0;
-    margin-top: 24px;
+    // margin-top: 24px;
+    margin-top: 16px;
 }
 
 .single-post-headshot {
@@ -212,6 +213,7 @@ a:visited {
     margin-bottom: 0;
 	font-size: 2em;
 	color: $color__black;
+    font-family: 'SuisseWorks-RegularItalic';
 }
 
 .three-categories-focus {
@@ -376,8 +378,7 @@ a:visited {
     text-align: right;
     margin-right: 2em;
     margin-left: 0;
-    margin-top: 30px;
-    
+    margin-top: 16px;
 }
 
 .ultra-small-side-nav {
@@ -489,11 +490,11 @@ div#navStudents:hover {
 }
 
 #student {
-    margin-top: -2em;
+    margin-top: -5em;
 }
 
 #sidebar-nav #student .three-categories-focus p {
-    margin-top: 1em;
+    // margin-top: 1em;
 }
 
 // EVENT CODE UPDATED
@@ -528,6 +529,7 @@ div#navStudents:hover {
     }
     .single-post-headshot {
         grid-column: 1 / span 5;
+        height: 25em;
     }
     .secondary {
         grid-column: 7/span 4;
@@ -546,8 +548,12 @@ div#navStudents:hover {
         margin-left: 6em;
         margin-top: 3em;
     }
+
+    label {
+        font-size: 14px;
+    }
     .projectDescription {
-        width: 100%;
+        width: 120%;
     }
     .grid-horizontal-two {
         display: flex;
@@ -585,7 +591,7 @@ div#navStudents:hover {
         width: calc(100% - 20px);
         margin: 10px;
     }
-    #sidebar-nav .showNav {
+    #sidebar-nav #works-student.showNav, #sidebar-nav #student.showNav {
         opacity: 0;
     }
     #content.no-nav {
@@ -594,6 +600,12 @@ div#navStudents:hover {
     .works-grid-container .works-grid-inner-container {
         flex: 0 100%;
     }
+    .imageGrid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
 
 /*IPAD MEDIA QUERY*/
@@ -603,6 +615,32 @@ and (max-width : 1024px) {
     #content.no-nav {
         margin-top: 0;
     }
+    label {
+        font-size: 9px;
+    }
+    .student-post-links {
+        margin-right: 5em;
+    }
+    .single-post-headshot {
+        grid-column: 1 / span 4;
+    }
+    .secondary {
+        grid-column: 5/span 5;
+        margin-left: 5em;
+    }
+    #project-links {
+        grid-column: 10 / span 3;
+    }
+    .small-nav-student-post-page {
+        font-size: 15px;
+        margin-top: 21px;
+    }
+    .single-post-h2 {
+        margin-top: 14px;
+    }
+    .projectDescription {
+        width: 100%;
+    }
 }
 
 @media only screen 
@@ -611,8 +649,11 @@ and (max-width : 767px) {
     #content.no-nav {
         margin-top: 0;
     }
-    #sidebar-nav .showNav {
+    #sidebar-nav #works-student.showNav, #sidebar-nav #student.showNav {
         opacity: 0;
+    }
+    #sidebar-nav #works-student.hideNav {
+        display: none;
     }
 }
 
@@ -623,4 +664,43 @@ and (max-width : 1366px) {
     #content.no-nav {
         margin-top: 0;
     }
+    .three-categories-focus {
+        margin-left: 3em;
+    }
+    .single-post-h2 {
+        margin-left: 22px;
+        margin-top: 11px;
+    }
+    .portfolio-site-link-style {
+        margin-left: 22px;
+    }
+    .socialSection {
+        margin-left: 22px; 
+    }
+    .focus {
+        margin-top: 10px;
+    }
+    p.portfolio-site-link-style {
+        font-size: 18px;
+    }
+    .student-post-links {
+        margin-right: 3.5em;
+    }
+    .single-post-headshot {
+        height: 30em;
+    }
+    .projectDescription {
+        width: 80%;
+    }
+     .portfolio-site-link-style-sidenav {
+        margin-bottom: 5px;
+    }
+    #sidebar-nav {
+        #student {
+            .three-categories-focus {
+                margin-left: 0;
+            }
+        }
+    }
+
 }

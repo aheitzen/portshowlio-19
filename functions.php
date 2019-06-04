@@ -122,11 +122,11 @@ add_action( 'widgets_init', 'portshowlio_widgets_init' );
 function portshowlio_scripts() {
 	wp_enqueue_style( 'portshowlio-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'portshowlio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'portshowlio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '2015', true );
 
-	wp_enqueue_script( 'portshowlio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'portshowlio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '2015', true );
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '2015', true );
 
 	// wp_enqueue_script( 'blotter', get_template_directory_uri() . '/js/blotter.min.js', array(), '20151215', true );
 	//

@@ -332,7 +332,7 @@ and (max-width : 1366px) {
 .map-copy {
   padding: 0 5% 8% 5%;
 	p {
-	font-family: 'SuisseIntl-Book';
+	// font-family: 'SuisseIntl-Book';
     font-size: 16px;
     // line-height: 1.21em;
     color: #191919;
@@ -348,12 +348,11 @@ and (max-width : 1366px) {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.buttonDirections{
-	// .buttonWrapper{
-	// 	width: 100%;
-	// 	margin: auto;
-	// }
+
+.even-page-time {
+	font-family: 'SuisseWorks-RegularItalic';
 }
+
 
 .event-floor-plan-header {
 	margin-top: -10px;

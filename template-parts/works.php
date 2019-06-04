@@ -15,15 +15,18 @@
 
 	function onWorkLeave() {
 		var sidebar = $('#sidebar-nav #works-student');
+        var headshot = sidebar.find('#headshot');
+        var name = sidebar.find('#name');
+        var originalSource = headshot.attr('src')
+
 		sidebar.removeClass('showNav');
 		sidebar.addClass('hideNav');
 
-        var interval = setIntervalTimer(function () {
-    		var headshot = sidebar.find('#headshot');
-    		var name = sidebar.find('#name');
-
-    		headshot.attr('src', '');
-    		name.text = '';
+        setTimeout(function () {
+            if (originalSource === headshot.attr('src')) {
+                headshot.attr('src', '');
+                name.text = '';
+            }
         }, 300);
 	}
 </script>

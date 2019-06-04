@@ -68,8 +68,8 @@
 					<div class="featured-project-type">
 						<h3 class="project-title-student-single"><?php the_sub_field('project_title'); ?></h3>
 						<p class="paragraph-project-type"><?php the_sub_field('project_type'); ?></p>
-						<!-- <div class="black-bar-collab"></div> -->
-						<img id="project-breaks"src="http://localhost:8888/wp-content/uploads/2019/06/Screen-Shot-2019-06-02-at-4.40.05-PM.png">
+						<div class="black-bar-collab"></div>
+						<!-- <img id="project-breaks"src="http://localhost:8888/wp-content/uploads/2019/06/Screen-Shot-2019-06-02-at-4.40.05-PM.png"> -->
 						<div class="projectDescription"><?php the_sub_field('project_description'); ?></div>
 						<?php if( get_sub_field('collaborators') ): ?>
 							<p class="collaboratortitle">Collaborators:</p>

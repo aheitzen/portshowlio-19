@@ -43,8 +43,8 @@
       </div>
       <div class="cellEvent event-section map-copy">
         <div class="event-dates">
-          <h3>June 13th & 14th</h3>
-          <p class="even-page-time">6:00 - 9:00PM</p>
+          <h3>June 12th & 13th</h3>
+          <p class="even-page-time">5:00 - 9:00pm</p>
 
         </div>
         <h5 class="space-top">Seattle Central College<br>1701 Broadway Ave<br>Seattle, WA 98122</h5>
