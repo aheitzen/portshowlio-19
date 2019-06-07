@@ -38,7 +38,7 @@
 
     <div class="search-filter">
         <p>
-            Search: <input type="search" id="searchInput" placeholder="Search by name, focus or progam then hit enter" size="30">
+            Search: <input type="search" id="searchInput" placeholder="Name, focus or progam then hit enter" size="30">
         </p>
         <p>
             Filter:

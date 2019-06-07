@@ -66,6 +66,19 @@
     width: 8.5em;
     font-family: 'SuisseIntl-Book';
     padding-top: 6px;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a:visited {
+        color: white;
+    }
+    a:active {
+        color: white;
+    }
+    a:link {
+        color: white;
+    }
 }
 
 @media all and (max-width: 767px) {
@@ -97,6 +110,23 @@
 	    padding: 4% 7%;
 		}
 	}
+	.rowEvent .cellEvent {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		height: auto;
+		margin-bottom: 10%;
+	}
+	.map {
+		padding-bottom: 0;
+	}
+	.container.event-floorplan {
+		margin-top: 8em;
+		display: inline-flex;
+	}
+	.event-intro {
+		padding: 15% 10% 30% 10%;
+	}
 }
 @media all and (max-width: 484px){
 	.page-content-404{
@@ -114,21 +144,37 @@
 }
 
 // FOOTER SCSS STARTS HERE
-.ianfooter{
-     background-color: #191919;
-    height: auto;
-    width: calc(100% - 30em);
-    display: flex;
-    margin-left: 30em;
-    flex-direction: row;
-    justify-content: center;
-    flex-direction: row;
-    padding: 4% 2%;
+// .ianfooter{
+//      background-color: #191919;
+//     height: auto;
+//     width: calc(100% - 30em);
+//     display: flex;
+//     margin-left: 30em;
+//     flex-direction: row;
+//     justify-content: center;
+//     flex-direction: row;
+//     padding: 4% 2%;
+// }
+.ianfooter {
+background-color: #191919;
+height: auto;
+width: calc(100% - 30em);
+display: flex;
+margin-left: 30em;
+justify-content: center;
+flex-direction: row;
+padding: 4% 6%;
 }
+
 .ianfooter .fab {
-	font-size: 35px;
-	padding-bottom: 10%;
+font-size: 35px;
+padding-bottom: 0;
+margin-right: 0;
 }
+// .ianfooter .fab {
+// 	font-size: 35px;
+// 	padding-bottom: 10%;
+// }
 .ianfooter a .fab {
 	color: $color__white;
 }
@@ -149,6 +195,12 @@
 			padding: 0 6%;
 		}
 	}
+}
+
+.event-map-img {
+	width: 70%;
+	display: flex;
+	margin: 0 auto;
 }
 
 .socialoutline.scca.social_center {
@@ -287,6 +339,31 @@ and (max-width : 1366px) {
 	canvas.b-canvas {
 		margin-top: 13em;
 	}
+	.page-content-404 {
+align-items: baseline;
+position: absolute;
+top: 80%;
+left: 30%;
+width: 40%;
+margin: auto;
+}
+
+.page-content-404 p {
+margin-top: 0;
+padding-top: 0;
+}
+
+.oops-button {
+margin-top: 0;
+}
+
+.buttonWrapper {
+margin-top: 0;
+}
+
+canvas.b-canvas {
+margin-top: -10em;
+}
 }
 
 
@@ -362,6 +439,10 @@ and (max-width : 1366px) {
 		font-size: 3vw;
 	}
 }
+
+// .event-button-link a {
+	
+// }
 
 .seattle-presents {
 	margin-bottom: 14px;

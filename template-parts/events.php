@@ -66,8 +66,8 @@
 <div class="container event-floorplan">
   <div class="row">
     <div class="cell event">
-      <h3 class="event-floor-plan-header">Event Floor Plan</h3>
-      <img src="<?php the_field('show_map'); ?>" alt="" />
+      <!-- <h3 class="event-floor-plan-header">Event Floor Plan</h3> -->
+      <img class="event-map-img" src="<?php the_field('show_map'); ?>" alt="" />
     </div>
   </div>
 </div>

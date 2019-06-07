@@ -152,6 +152,15 @@ body {
         text-decoration: underline;
         cursor: pointer;
     }
+    a:visited {
+        color: white;
+    }
+    a:active {
+        color: white;
+    }
+    a:link {
+        color: white;
+    }
 }
 
 a {
@@ -547,6 +556,14 @@ div#navStudents:hover {
         width: calc(100% - 66px - 6em);
         margin-left: 6em;
         margin-top: 3em;
+    }
+    #searchInput {
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 2px solid;
+        color: #FBF9F4;
     }
 
     label {
