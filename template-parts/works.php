@@ -33,7 +33,7 @@
 
 <div id="works">
 	<?php
-        //remove_all_filters('posts_orderby');
+        remove_all_filters('posts_orderby');
         $args = array(
             'post_type' => array('student'),
             'posts_per_page' => 100,

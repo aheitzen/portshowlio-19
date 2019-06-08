@@ -506,6 +506,10 @@ div#navStudents:hover {
     // margin-top: 1em;
 }
 
+a.siteLink {
+    hyphens: auto;
+}
+
 // EVENT CODE UPDATED
 
 .oops-button {
@@ -532,6 +536,8 @@ div#navStudents:hover {
     }
     div#sidebar-nav {
         border: none;
+        align-items: center;
+        display: flex;
     }
     .small-nav-student-post-page {
         display: none;
@@ -545,6 +551,7 @@ div#navStudents:hover {
     }
     .single-post-h2 {
         margin-top: 0;
+        font-size: 4em;
     }
     .portfolio-site-link-style {
         margin-bottom: 8px;
@@ -557,6 +564,9 @@ div#navStudents:hover {
         margin-left: 6em;
         margin-top: 3em;
     }
+    #searchInput::-webkit-input-placeholder {
+        color: #191919;
+    }
     #searchInput {
         border: 0;
         border-radius: 0;
@@ -564,6 +574,7 @@ div#navStudents:hover {
         background: transparent;
         border-bottom: 2px solid;
         color: #FBF9F4;
+        -webkit-appearance: none;
     }
 
     label {
@@ -610,6 +621,10 @@ div#navStudents:hover {
     }
     #sidebar-nav #works-student.showNav, #sidebar-nav #student.showNav {
         opacity: 0;
+        display: none;
+    }
+    #sidebar-nav #student.hideNav {
+        display: none;
     }
     #content.no-nav {
         margin-top: 0;

@@ -11,11 +11,6 @@
     margin-bottom: 10px;
 }
 
-.students-images {
-    max-width: 100%;
-    height: 25em;
-}
-
 .students-images__div {
     .headshot {
         display: inherit;
@@ -37,6 +32,34 @@
 }
 
 .students-focus {}
+
+#students {
+    .students-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 3em 5em;
+        .students {
+            flex: 0 30%;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5%;
+            &:nth-of-type(3n-1) {
+                margin-top: 40px;
+            }
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+
+            .students-images {
+                max-width: 100%;
+                height: auto;
+                margin-top: 0px;
+            }
+        }
+    }
+    
+}
 
 
 //  SEARCH AND FILTER
@@ -72,6 +95,7 @@ input:checked + label {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: -webkit-sticky;
     position: sticky;
     bottom: 0em;
 }
@@ -208,16 +232,10 @@ and (max-width : 767px) {
         top: 0;
     }
 
-    // #logo {
-    //     padding: 1em;
-    //     max-height: 100%;
-    //     max-width: initial;
-    //     width: 56px;
-    //     height: 66px;
-    // }
+
     #logo {
-max-height: 30vh;
-}
+        max-height: 30vh;
+    }
     .primary-navigation {
         align-items: flex-end;
     }
@@ -242,6 +260,7 @@ max-height: 30vh;
         justify-content: space-around;
         width: 100%;
         align-items: center;
+        flex-direction: row;
     }
     p.students-focus.subhead {
         font-size: 3.2em;
@@ -250,25 +269,21 @@ max-height: 30vh;
 
 
     //  STUDENTS
-
-    .students-images {
-        max-width: 100%;
-        height: auto;
-        margin-top: 0;
-    }
-
-
-    .students-grid {
-        display: grid;
-        grid-template-columns: 5em 1fr 5em;
-        grid-template-rows: repeat(auto-fill, 1fr);
-        grid-row-gap: 5em;
-        justify-items: center;
-        align-items: start;
-    }
-
-    .students:nth-of-type(n) {
-        grid-column-start: 2;
+    #students {
+        .students-grid {
+            .students {
+                flex: 0 100%;
+                margin-right: 0;
+                margin-bottom: 40px;
+                &:nth-of-type(3n-1) {
+                    margin-top: 0px;
+                    margin-right: 0px;
+                }
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
+            }
+        }
     }
 
     //    SEARCH AND FILTER
@@ -294,37 +309,27 @@ max-height: 30vh;
 
 
     //  STUDENTS
-
-    .students-images {
-        max-width: 100%;
-        height: auto;
-        margin-top: 0px;
-    }
-
-    .students-grid {
-        display: grid;
-        grid-template-columns: 5em 1fr 1fr 5em;
-        grid-column-gap: 5em;
-        //        grid-template-rows: repeat(auto-fill, 1fr);
-        // grid-auto-rows: minmax(min-content, 70vw);
-        grid-auto-rows: minmax(min-content, 48vw);
-        grid-row-gap: 5em;
-        justify-items: center;
-        align-items: start;
-
-    }
-
-    .students:nth-of-type(odd) {
-        grid-column-start: 2;
-    }
-
-    .students:nth-of-type(even) {
-        grid-column-start: 3;
-        align-self: end;
+    #students {
+        .students-grid {
+            .students {
+                flex: 0 45%;
+                margin-bottom: 40px;
+                &:nth-of-type(3n-1) {
+                    margin-top: 0px;
+                    margin-right: 0px;
+                }
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
+                &:nth-of-type(odd) {
+                    margin-right: 5%;
+                }
+            }
+        }
     }
     #searchInput::-webkit-input-placeholder {
-    font-size: 7.5px;
-    color: #FBF9F4;
+        font-size: 7.5px;
+        color: #FBF9F4;
     }
     .search-filter {
         margin-top: 10em;
@@ -333,33 +338,32 @@ max-height: 30vh;
 }
 
 @media all and (max-height: 849px) {
-#sidebar-nav #works-student.shownav {
-display: none;
+    #sidebar-nav #works-student.shownav {
+        display: none;
+    }
 }
 
 @media all and (min-width: 992px) and (max-width: 1199px) {
 
 
     //  STUDENTS
-
-    .students-images {
-        max-width: 100%;
-        height: auto;
-        margin-top: 0px;
-    }
-
-    .students-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 5em;
-        grid-row-gap: 5em;
-        justify-items: center;
-        align-items: start;
-        margin-left: 5em;
-        margin-right: 5em;
-        margin-bottom: 10em;
-        //        grid-template-rows: repeat(auto-fill, 1fr);
-        // grid-auto-rows: minmax(min-content, 70vw);
+    #students {
+        .students-grid {
+            .students {
+                flex: 0 45%;
+                margin-bottom: 40px;
+                &:nth-of-type(3n-1) {
+                    margin-top: 0px;
+                    margin-right: 0px;
+                }
+                &:nth-of-type(3n) {
+                    margin-right: auto;
+                }
+                &:nth-of-type(odd) {
+                    margin-right: 5%;
+                }
+            }
+        }
     }
 
     .students-test:nth-of-type(odd) {
@@ -375,38 +379,4 @@ display: none;
         font-size: 9px;
         color: #FBF9F4;
     }
-}
-
-@media all and (min-width: 1200px) {
-    //  STUDENTS
-    .students-images {
-        max-width: 90%;
-        height: auto;
-        margin-top: 0px;
-    }
-
-    .students-grid {
-        display: grid;
-        grid-template-columns: 5em 1fr 1fr 1fr 5em;
-        grid-column-gap: 5em;
-        grid-auto-rows: minmax(min-content, 33vw);
-        grid-row-gap: 5em;
-        justify-items: center;
-        align-items: start;
-        margin-bottom: 10em;
-    }
-
-    .students:nth-of-type(3n-2) {
-        grid-column-start: 2;
-    }
-
-    .students:nth-of-type(3n-1) {
-        grid-column-start: 3;
-        align-self: end;
-    }
-
-    .students:nth-of-type(3n) {
-        grid-column-start: 4;
-    }
-}
 }
